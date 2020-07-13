@@ -14,7 +14,7 @@ Nesse projeto vocês irão desenvolver novas funcionalidades a partir dos conhec
 
 No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto, vocês terão que utilizar, além do _MySQL_, o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
 
-Como dito anteriormente, o principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês, como por exemplo, refatorar o projeto para utilizar o _ORM Sequelize_, para utilizar a abordagem _DDD_, dentre outras coisas. E, como dito anteriormente também, novas features deverão ser adicionadas, como por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuário, dentre outras implementações.
+Como dito anteriormente, o principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês, como por exemplo, refatorar o projeto para utilizar o _ORM Sequelize_, para utilizar a abordagem _DDD_, dentre outras coisas. E, como dito anteriormente também, novas features deverão ser adicionadas, como por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
 
 Dito tudo isso, vamos para os requisitos para que vocês tenham maiores detalhes do que deve ser desenvolvido nesse projeto!
 
