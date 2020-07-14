@@ -73,7 +73,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 6. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja corrigido utilizando o banco de dados arquitetado por você. Dito isso, o arquivo `.sql`, contendo as _querys_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`.
 
-6. Atente-se para o objetivo de cada pasta/camada. A estrutura esperada para a sua aplicação é similar a essa:
+7. Atente-se para o objetivo de cada pasta/camada. A estrutura esperada para a sua aplicação é similar a essa:
 
    ```
    └── application
@@ -117,7 +117,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Testes
 
-10. A cobertura de testes unitários, do front-end, deve ser de no mínimo 90%.
+8. A cobertura de testes unitários, do front-end, deve ser de no mínimo 90%.
 
 ---
 
