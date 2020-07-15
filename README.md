@@ -62,7 +62,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
    -  `Preparando` quando o pedido for recebido e iniciado.
    -  `Finalizado` quando o pedido terminar.
 
-3. O admin deve ter o controle de alterar o status do pedido lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação.
+3. O admin deve ter o controle de alterar o status do pedido lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possa ser acrescentado novos comportamentos, sem impactar os status ja existentes.
 
 4. Qualquer atualização feita pelo admin no pedido deve ser refletir em tempo real para o cliente.
 
