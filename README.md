@@ -69,7 +69,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 3. O nickname de cliente deve ser o email cadastrado.
 
-4. O histórico da conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
+4. O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
 
 ### Funcionalidade de chat, visão de admin
 
@@ -105,7 +105,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 - Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox.
 
-- O loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo.
+- O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo.
 
 - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
