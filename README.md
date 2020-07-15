@@ -47,33 +47,23 @@ Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os
 
 O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e outra pessoa possa aceitar esse pedido no **admin**.
 
+⚠️ **Dica**: Ao refatorar e adicionar funcionalidades, não se esqueça de que está respeitando os princípios do SOLID. Dito isso, atente-se a implementação dos princípios sempre que tiver fazendo alguma alteração no código.
+
 ##### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com a facilitação.
 
 ## Requisitos do projeto
 
 ### Testes
 
-1. A cobertura de testes unitários, do back-end, deve ser de no mínimo 90%.
+1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
 ### Abordagem DDD e Sequelize
 
-2. Atente-se para seguir os seguintes princípios do _SOLID_:
+2. A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end;
 
-   - Single responsibility principle (Princípio da responsabilidade única);
+3. O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
 
-   - Open/Closed principle (Princípio aberto/fechado);
-
-   - Dependency inversion principle (Princípio da inversão da dependência).
-
-3. A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será no back-end, o banco de dados e front-end não devem conter lógicas de regra de negócio. Dito isso, _triggers_, _procedures_, dentre outras, e regras de negócio no front-end **não** devem ser utilizados;
-
-4. O projeto deve respeitar a estrutura proposta pela abordagem _DDD_. Dito isso, ele deve ser composto por três pastas: `application`, `domain` e `infrastructure`;
-
-5. O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
-
-6. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja corrigido utilizando o banco de dados arquitetado por você. Dito isso, o arquivo `.sql`, contendo as _querys_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`.
-
-7. Atente-se para o objetivo de cada pasta/camada. A estrutura esperada para a sua aplicação é similar a essa:
+4. O projeto deve respeitar a estrutura proposta pela abordagem _DDD_. Dito isso, ele deve ser composto por três pastas: `application`, `domain` e `infrastructure`. Atente-se para o objetivo de cada pasta/camada do DDD. A estrutura esperada para a sua aplicação é similar a descrita abaixo. Você pode adicionar mais arquivos, se quiser, contanto que respeite a estrutura;
 
    ```
    └── application
@@ -103,21 +93,13 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
    │   └── ...
    ```
 
-### N - Nome requisito
-
-- Descrição.
-
-- Descrição.
-
-- Descrição.
-
-- Descrição.
+5. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
 
 ### Bônus
 
 ### Testes
 
-8. A cobertura de testes unitários, do front-end, deve ser de no mínimo 90%.
+6. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
