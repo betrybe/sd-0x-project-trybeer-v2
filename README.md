@@ -43,15 +43,57 @@ Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os
 
 ## Requisitos do projeto
 
-⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e se estiver, também, seguindo corretamente os padrões REST para rotas e MVC para o back-end. Além disso, você deve também disponibilizar um script contendo a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
-
-⚠️ A criação dos endpoints da API, a modelagem do banco e a estrutura geral do projeto é livre, desde que os requisitos especificados na seção `Requisitos Gerais` sejam cumpridos.
+⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
 
 O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e outra pessoa possa aceitar esse pedido no **admin**.
+
+⚠️ **Dica**: Ao refatorar e adicionar funcionalidades, não se esqueça de que está respeitando os princípios do SOLID. Atente-se a implementação dos princípios sempre que tiver fazendo alguma alteração no código.
 
 ##### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com a facilitação.
 
 ## Requisitos do projeto
+
+### Testes
+
+1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
+
+### Abordagem DDD e Sequelize
+
+2. A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end.
+
+3. O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
+
+4. O projeto deve respeitar a estrutura proposta pela abordagem _DDD_. Dito isso, ele deve ser composto por três pastas: `application`, `domain` e `infrastructure`. Atente-se para o objetivo de cada pasta/camada do DDD. A estrutura esperada para a sua aplicação é similar a descrita abaixo. Você pode adicionar mais arquivos, se quiser, contanto que respeite a estrutura.
+
+   ```
+   └── application
+   │   ├── user
+   │   │   └── userController.js
+   │   └── ...
+   └── domain
+   │   ├── user.js
+   │   └── ...
+   └── infrastructure
+   │   └── database
+   │   │   └── config
+   │   │   │   └── config.json
+   │   │   └── migrations
+   │   │   │   ├── [timestamp]-create-user-table.js
+   │   │   │   └── ...
+   │   │   └── models
+   │   │   │   ├── index.js
+   │   │   │   ├── User.js
+   │   │   │   └── ...
+   │   │   └── seeders
+   │   │   │   ├── [timestamp]-create-first-user.js
+   │   │   │   └── ...
+   │   └── user
+   │   │   ├── UserMapper.js
+   │   │   └── UserRepository.js
+   │   └── ...
+   ```
+
+5. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
 
 ### Status do pedido
 
@@ -71,15 +113,9 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Bônus
 
-### N + 1 - Nome requisito
+### Testes
 
-- Descrição.
-
-- Descrição.
-
-- Descrição.
-
-- Descrição.
+6. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
