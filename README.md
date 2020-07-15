@@ -53,19 +53,21 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ## Requisitos do projeto
 
-### Status do pedido 
+### Status do pedido
 
-1. Todo pedido realizado, deve ter um status referente ao seu progresso atual.
+1. Todo pedido realizado deve ter um status referente ao seu progresso atual.
 
 2. Os _status_ do pedido devem ser os seguintes:
-   -  `Aguardando` logo quando o pedido for criado.
-   -  `Preparando` quando o pedido for recebido e iniciado.
-   -  `Finalizado` quando o pedido terminar.
 
-3. O admin deve ter o controle de alterar o status do pedido lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possa ser acrescentado novos comportamentos, sem impactar os status ja existentes.
+   - `Aguardando` logo quando o pedido for criado;
 
-4. Qualquer atualização feita pelo admin no pedido deve ser refletir em tempo real para o cliente.
+   - `Preparando` quando o pedido for iniciado pelo usuário admin;
 
+   - `Finalizado` quando o pedido terminar.
+
+3. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
+
+4. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
 ### Bônus
 
