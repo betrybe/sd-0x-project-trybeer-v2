@@ -95,6 +95,22 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 5. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
 
+### Status do pedido
+
+1. Todo pedido realizado deve ter um status referente ao seu progresso atual.
+
+2. Os _status_ do pedido devem ser os seguintes:
+
+   - `Aguardando` logo quando o pedido for criado;
+
+   - `Preparando` quando o pedido for iniciado pelo usuário admin;
+
+   - `Finalizado` quando o pedido terminar.
+
+3. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
+
+4. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
+
 ### Bônus
 
 ### Testes
