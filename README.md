@@ -117,13 +117,13 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 11. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chat denominada `Conversar com a loja`.
 
-   - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+    - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
 
 12. Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
 
-   - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
+    - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
 
-   - A página deve ter um input para envio de nova mensagem ao chat.
+    - A página deve ter um input para envio de nova mensagem ao chat.
 
 13. O nickname de cliente deve ser o email cadastrado.
 
@@ -135,23 +135,23 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 16. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
 
-   - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
+    - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
 
-   - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
+    - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
 
-   - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
+    - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
 
 17. Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
 
-   - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
+    - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
 
-   - O _nickname_ da loja na conversa deve ser "Loja".
+    - O _nickname_ da loja na conversa deve ser "Loja".
 
 18. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
 
 19. A lista de conversas deve ser ordenada pela data da última mensagem.
 
-   - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
+    - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
 
 ## Bônus
 
@@ -161,11 +161,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 21. Na página de chats deve haver um botão identificado com `Nova linha de transmissão`:
 
-   - Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox;
+    - Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox;
 
-   - O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo;
+    - O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo;
 
-   - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
+    - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
 ### Testes
 
