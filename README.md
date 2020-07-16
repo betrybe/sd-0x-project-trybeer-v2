@@ -8,13 +8,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Esse projeto é uma continuação do projeto `Trybeer`! Ou seja, o _commit_ inicial nesse repositório será todo o projeto que foi desenvolvido por vocês anteriormente. Logo, esse será o ponto de partida de vocês para esse projeto.
 
-Como vocês podem presumir, o grupo continua sendo o mesmo que foi quando vocês desenvolveram o `Trybeer v1`.
+O grupo continua sendo o mesmo que foi quando vocês desenvolveram o `Trybeer v1`.
 
 Nesse projeto vocês irão desenvolver novas funcionalidades a partir dos conhecimentos adquiridos nos últimos blocos. Além de desenvolver novas funcionalidades, vocês terão também novos desafios, pois algumas demandas farão com que vocês refatorem a arquitetura do projeto.
 
-No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto, vocês terão que utilizar, além do _MySQL_, o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
+No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto além do _MySQL_, vocês terão que utilizar o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
 
-Como dito anteriormente, o principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês, como por exemplo, refatorar o projeto para utilizar o _ORM Sequelize_, para utilizar a abordagem _DDD_, dentre outras coisas. E, como dito anteriormente também, novas features deverão ser adicionadas, como por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
+O principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês. A intenção é refatorar o projeto para, por exemplo, utilizar o _ORM Sequelize_, utilizar a abordagem _DDD_, dentre outras coisas. Novas features deverão ser adicionadas como, por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
 
 Dito tudo isso, vamos para os requisitos para que vocês tenham maiores detalhes do que deve ser desenvolvido nesse projeto!
 
@@ -56,6 +56,48 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 ### Testes
 
 1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
+
+### Funcionalidade de chat, visão de cliente
+
+1. Essa funcionalidade só deve existir na **visão de cliente**
+
+2. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chat denominada `Conversar com a loja`.
+
+  - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+
+3. Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
+
+  - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
+
+  - A página deve ter um input para envio de nova mensagem ao chat.
+
+3. O nickname de cliente deve ser o email cadastrado.
+
+4. O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+
+### Funcionalidade de chat, visão de admin
+
+5. Essa funcionalidade só deve existir na **visão de admin**
+
+6. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
+
+  - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
+
+  - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
+
+  - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
+
+7. Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
+
+  - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
+
+  - O _nickname_ da loja na conversa deve ser "Loja".
+
+8. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
+
+9. A lista de conversas deve ser ordenada pela data da última mensagem.
+
+  - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
 
 ### Abordagem DDD e Sequelize
 
@@ -112,6 +154,18 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 4. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
 ### Bônus
+
+### Funcionalidade de chat, visão de admin: envio de mensagens em broadcast
+
+10. Essa funcionalidade só deve existir na **visão de admin**
+
+11. Na página de chats deve haver um botão identificado com `Nova linha de transmissão`.
+
+- Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox.
+
+- O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo.
+
+- A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
 ### Testes
 
@@ -195,7 +249,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO
+### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
