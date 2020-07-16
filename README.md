@@ -168,7 +168,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Deploy Heroku
 
-22. Criar scripts bash nos quais contém a sequencia de comandos para realizar o deploy via Heroku, tanto para **Front-end** e **Back-end**, os scripts devem ter os seguintes nomes :  
+22. Faça _scripts bash_ contendo a sequência de comandos necessários para realizar o deploy via Heroku tanto para o **front-end** quanto para o **back-end**. Os scripts devem ter os seguintes nomes:
     - `deploy-front-end.sh` 
     - `deploy-back-end.sh`
 
