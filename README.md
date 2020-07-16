@@ -40,6 +40,7 @@ Esse repositório deve conter, como dito anteriormente, o código desenvolvido p
 Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os e utilize, para o `MySQL`, as funcionalidades do _Sequelize_ para que o seu projeto seja corrigido utilizando o banco de dados arquitetado por você!
 
 ##### Você também deve **escrever testes unitários que devem cobrir pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
+
 ## Requisitos do projeto
 
 ⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
