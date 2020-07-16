@@ -40,8 +40,7 @@ Esse repositório deve conter, como dito anteriormente, o código desenvolvido p
 Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os e utilize, para o `MySQL`, as funcionalidades do _Sequelize_ para que o seu projeto seja corrigido utilizando o banco de dados arquitetado por você!
 
 ##### Você também deve **escrever testes unitários que devem cobrir pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
-
-## Requisitos do projeto
+# Requisitos do projeto
 
 ⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
 
@@ -167,9 +166,20 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
+### Deploy Heroku
+
+22. Criar scripts bash nos quais contém a sequencia de comandos para realizar o deploy via Heroku, tanto para **Front-end** e **Back-end**, os scripts devem ter os seguintes nomes :  
+    - `deploy-front-end.sh` 
+    - `deploy-back-end.sh`
+
+### Monitoramento do Back-End
+
+23. Criar um script bash no qual contém a sequencia de comandos para realizar o monitoramento da `API` via PM2 no `Heroku`, o script deve conter o seguinte nome:
+    - `monitoring-run.sh`
+
 ### Testes
 
-22. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
+24. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
