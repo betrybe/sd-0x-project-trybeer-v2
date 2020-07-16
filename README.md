@@ -174,7 +174,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Monitoramento do Back-End
 
-23. Criar um script bash no qual contém a sequencia de comandos para realizar o monitoramento da `API` via PM2 no `Heroku`, o script deve conter o seguinte nome:
+23. Faça um _script bash_ contendo a sequência de comandos necessários para realizar o monitoramento da `API` via _PM2_. O script deve ter o seguinte nome:
     - `monitoring-run.sh`
 
 ### Testes
