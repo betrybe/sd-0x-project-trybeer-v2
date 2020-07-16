@@ -167,9 +167,23 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
+### Deploy Heroku
+
+22. Faça _scripts bash_ contendo a sequência de comandos necessários para realizar o deploy via Heroku tanto para o **front-end** quanto para o **back-end**. Os scripts devem ter os seguintes nomes:
+
+    - `deploy-front-end.sh`;
+
+    - `deploy-back-end.sh`.
+
+### Monitoramento do Back-End
+
+23. Faça um _script bash_ contendo a sequência de comandos necessários para realizar o monitoramento da `API` via _PM2_. O script deve ter o seguinte nome:
+
+    - `monitoring-run.sh`.
+
 ### Testes
 
-22. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
+24. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
