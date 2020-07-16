@@ -170,13 +170,16 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 ### Deploy Heroku
 
 22. Faça _scripts bash_ contendo a sequência de comandos necessários para realizar o deploy via Heroku tanto para o **front-end** quanto para o **back-end**. Os scripts devem ter os seguintes nomes:
-    - `deploy-front-end.sh` 
-    - `deploy-back-end.sh`
+
+    - `deploy-front-end.sh`;
+
+    - `deploy-back-end.sh`.
 
 ### Monitoramento do Back-End
 
 23. Faça um _script bash_ contendo a sequência de comandos necessários para realizar o monitoramento da `API` via _PM2_. O script deve ter o seguinte nome:
-    - `monitoring-run.sh`
+
+    - `monitoring-run.sh`.
 
 ### Testes
 
