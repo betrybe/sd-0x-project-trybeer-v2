@@ -57,48 +57,6 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
-### Funcionalidade de chat, visão de cliente
-
-1. Essa funcionalidade só deve existir na **visão de cliente**
-
-2. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chat denominada `Conversar com a loja`.
-
-  - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
-
-3. Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
-
-  - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
-
-  - A página deve ter um input para envio de nova mensagem ao chat.
-
-3. O nickname de cliente deve ser o email cadastrado.
-
-4. O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
-
-### Funcionalidade de chat, visão de admin
-
-5. Essa funcionalidade só deve existir na **visão de admin**
-
-6. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
-
-  - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
-
-  - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
-
-  - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
-
-7. Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
-
-  - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
-
-  - O _nickname_ da loja na conversa deve ser "Loja".
-
-8. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
-
-9. A lista de conversas deve ser ordenada pela data da última mensagem.
-
-  - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
-
 ### Abordagem DDD e Sequelize
 
 2. A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end.
@@ -139,9 +97,9 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Status do pedido
 
-1. Todo pedido realizado deve ter um status referente ao seu progresso atual.
+6. Todo pedido realizado deve ter um status referente ao seu progresso atual.
 
-2. Os _status_ do pedido devem ser os seguintes:
+7. Os _status_ do pedido devem ser os seguintes:
 
    - `Aguardando` logo quando o pedido for criado;
 
@@ -149,27 +107,69 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
    - `Finalizado` quando o pedido terminar.
 
-3. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
+8. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
 
-4. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
+9. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
-### Bônus
+### Funcionalidade de chat, visão de cliente
+
+10. Essa funcionalidade só deve existir na **visão de cliente**
+
+11. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chat denominada `Conversar com a loja`.
+
+   - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+
+12. Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
+
+   - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
+
+   - A página deve ter um input para envio de nova mensagem ao chat.
+
+13. O nickname de cliente deve ser o email cadastrado.
+
+14. O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+
+### Funcionalidade de chat, visão de admin
+
+15. Essa funcionalidade só deve existir na **visão de admin**
+
+16. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
+
+   - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
+
+   - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
+
+   - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
+
+17. Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
+
+   - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
+
+   - O _nickname_ da loja na conversa deve ser "Loja".
+
+18. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
+
+19. A lista de conversas deve ser ordenada pela data da última mensagem.
+
+   - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
+
+## Bônus
 
 ### Funcionalidade de chat, visão de admin: envio de mensagens em broadcast
 
-10. Essa funcionalidade só deve existir na **visão de admin**
+20. Essa funcionalidade só deve existir na **visão de admin**
 
-11. Na página de chats deve haver um botão identificado com `Nova linha de transmissão`.
+21. Na página de chats deve haver um botão identificado com `Nova linha de transmissão`:
 
-- Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox.
+   - Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox;
 
-- O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo.
+   - O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo;
 
-- A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
+   - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
 
 ### Testes
 
-6. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
+22. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
