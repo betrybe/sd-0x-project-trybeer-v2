@@ -18,7 +18,7 @@ O principal intuito desse projeto é que vocês refatorem alguns pontos do que j
 
 Dito tudo isso, vamos para os requisitos para que vocês tenham maiores detalhes do que deve ser desenvolvido nesse projeto!
 
-Você pode acessar um protótipo do front-end [aqui](https://www.figma.com/file/tzP4txu6Uy0qCxVZWdWMBO/TryBeer?node-id=0%3A1).
+Você pode acessar um protótipo do front-end [aqui](https://www.figma.com/file/dRYG01MdRnxQr6nlp1wT2o/Trybeer-v2?node-id=0%3A1).
 
 Para servir arquivos estáticos como imagens no back-end, utilize o seguinte path:
 `/back-end/public/`
@@ -101,11 +101,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 7. Os _status_ do pedido devem ser os seguintes:
 
-   - `Aguardando` logo quando o pedido for criado;
+   - `Pendente` logo quando o pedido for criado;
 
    - `Preparando` quando o pedido for iniciado pelo usuário admin;
 
-   - `Finalizado` quando o pedido terminar.
+   - `Entregue` quando o pedido terminar.
 
 8. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
 
@@ -146,6 +146,10 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
     - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
 
     - O _nickname_ da loja na conversa deve ser "Loja".
+
+    - A página da conversa deve mostrar, no topo da tela, o email do usuário que a Loja está conversando.
+
+    - A página da conversa deve ter um botão de voltar que ao ser clicado redireciona a pessoa a página de listagem de conversas novamente.
 
 18. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
 
