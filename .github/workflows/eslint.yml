@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    container: "node:alpine"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install back-end dependencies
+        run: npm ci --prefix=back-end
+      - name: Install front-end dependencies
+        run: npm ci --prefix=front-end
+      - name: Lint project
+        run: npx eslint --no-inline-config .
