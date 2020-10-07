@@ -15,26 +15,25 @@
  * @type {Cypress.PluginConfig}
  */
 require('dotenv').config();
-const  my = require('mysql2');
-
-function queryTestDb(query, config) {
-  const connection = my.createConnection({host: process.env.HOSTNAME, user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD})
-  connection.connect()
-  return new Promise((resolve, reject) => {
-    connection.query(query, (error, results) => {
-      if (error) reject(error)
-      else {
-        connection.end()
-        return resolve(results)
-      }
-    })
-  })
-}
+const { MongoClient } = require('mongodb');
+const mongoDbUrl = process.env.DB_URL;
+const bancomongo = process.env.DB_NAME;
 
 module.exports = (on, config) => {
   on('task', {
-    queryDb: query => {
-      return queryTestDb(query, config)
+    deleteCollection(collection) {
+      return new Promise((resolve) => {
+        MongoClient.connect(mongoDbUrl, (err, client) => {
+          if (err) {
+            throw err;
+          } else {
+            const db = client.db(bancomongo);
+            db.collection(collection).deleteMany({});
+            resolve('');
+            client.close();
+          }
+        })
+      });
     }
   });
 
