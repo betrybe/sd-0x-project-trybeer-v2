@@ -14,25 +14,21 @@
 /**
  * @type {Cypress.PluginConfig}
  */
+const connection = require('./connection');
 require('dotenv').config();
-const { MongoClient } = require('mongodb');
-const mongoDbUrl = process.env.DB_URL;
-const bancomongo = process.env.DB_NAME;
+
+const deleteMessages = async (collection) => {
+  const db = await connection();
+  await db.collection(collection).deleteMany({});
+};
 
 module.exports = (on, config) => {
   on('task', {
     deleteCollection(collection) {
-      return new Promise((resolve) => {
-        MongoClient.connect(mongoDbUrl, (err, client) => {
-          if (err) {
-            throw err;
-          } else {
-            const db = client.db(bancomongo);
-            db.collection(collection).deleteMany({});
-            resolve('');
-            client.close();
-          }
-        })
+       return new Promise((resolve) => {
+        deleteMessages(collection);
+        resolve('');
+        close();
       });
     }
   });
