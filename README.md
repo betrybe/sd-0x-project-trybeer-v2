@@ -134,16 +134,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 - Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
-Tela do Detalhe pedido Administrador
-
+### Tela do Detalhe pedido Administrador
 
 - O botão 'Preparar pedido' deverá conter a tag `data-testid="mark-as-prepared-btn"`
 
-- O botão 'Meus Pedidos' deverá conter a tag `data-testid="side-menu-item-my-orders"`
-
-- O botão 'Meu Perfil' deverá conter a tag `data-testid="side-menu-item-my-profile"`
-
-- O botão 'Sair' deverá conter a tag `data-testid="side-menu-item-logout"`
+![Detalhe pedido Administrador](./public/detalhepedidoadmin.png)
 
 ### Além disso,as seguintes verificações serão feitas:
 
@@ -155,19 +150,19 @@ Tela do Detalhe pedido Administrador
 
 **[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]**
 
-**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como preparando`]**
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar Pedido`]**
 
 **[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]**
 
-**[Quando clicar no botão `Marcar como preparando` deve alterar o status do detalhe do pedido para `Preparando`]**
+**[Quando clicar no botão `Preparar Pedido` deve alterar o status do detalhe do pedido para `Preparando`]**
 
 **[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]**
 
-**[Quando clicar no botão `Marcar como entregue` os botões `Marcar como preparando` e `Marcar como entregue` devem sumir da tela]**
+**[Quando clicar no botão `Marcar como entregue` os botões `Preparar Pedido` e `Marcar como entregue` devem sumir da tela]**
 
 **[Ao clicar no botão `Marcar como entregue` será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]**
 
-**[Ao clicar no botão `Marcar como preparando` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
+**[Ao clicar no botão `Preparar Pedido` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
 
 **[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
 
@@ -177,7 +172,6 @@ Tela do Detalhe pedido Administrador
 
 **[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
 
-
 ### Criar funcionalidade de chat na visão de cliente
 
 - Essa funcionalidade só deve existir na **visão de cliente**
@@ -185,6 +179,8 @@ Tela do Detalhe pedido Administrador
 - Adicionar ao menu lateral, uma botão de chat denominada `Conversar com a loja`.
 
     - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+
+    - A rota da tela deve ser `/chat`;
 
 - Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
 
@@ -196,9 +192,39 @@ Tela do Detalhe pedido Administrador
 
 - O chat deve conter tambem a hora que a mensagem foi enviada.
 
+- A hora deve ter o formato `15:30`.
+
 - O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
 
+### Tela do Detalhe de chat do cliente
 
+- O botão 'Conversar com a loja' deverá conter a tag `data-testid="side-menu-chat"`
+
+- A elemento com o nickname do cliente deverá conter a tag `data-testid="nickname"`
+
+- A elemento com a data da mensagem deverá conter a tag `data-testid="message-time"`
+
+- A elemento com a mensagem do cliente deverá conter a tag `data-testid="text-message"`
+
+- O input de escrever a mensagem deverá conter a tag `data-testid="message-input"`
+
+- O botão para enviar a mensagem deverá conter a tag `data-testid="send-message"`
+
+![Chat do cliente](./public/telachatcliente.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Será validado que ao clicar no menu `Conversar com a loja` será redirecionado para página na url `/chat`]**
+
+**[Será validado que existe o campo input e o botão de enviar mensagem]**
+
+**[Será validado que ao enviar mensagem o `nikname` do cliente é o seu email]**
+
+**[Será validado que ao enviar mensagem a data fica visível na tela]**
+
+**[Será validado que ao enviar mensagem a mensagem fica visível na tela]**
+
+**[Será validado que ê possivel enviar várias mensagens]**
 
 ### Funcionalidade de chat, visão de admin
 
