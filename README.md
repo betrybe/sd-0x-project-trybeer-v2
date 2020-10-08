@@ -108,55 +108,83 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ⚠️ **Dica**: Ao refatorar e adicionar funcionalidades, não se esqueça de que está respeitando os princípios do SOLID. Atente-se a implementação dos princípios sempre que tiver fazendo alguma alteração no código.
 
-##### O projeto sera composto por duas entregas, cada uma especificada abaixo com seus respectivos requisitos e o prazo decidido com a facilitação.
+### Abordagem DDD e Sequelize
+
+- A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end.
+
+- O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
+
+- Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
 
 ## Requisitos do projeto
 
-### Testes
+### Criar o status para o pedido
 
-1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
+- Todo pedido realizado deve ter um status referente ao seu progresso atual.
 
-### Abordagem DDD e Sequelize
-
-2. A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end.
-
-3. O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
-
-4. Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
-
-### Status do pedido
-
-5. Todo pedido realizado deve ter um status referente ao seu progresso atual.
-
-8. Os _status_ do pedido devem ser os seguintes:
+- Os `status` do pedido devem ser os seguintes:
 
    - `Pendente` logo quando o pedido for criado;
 
    - `Preparando` quando o pedido for iniciado pelo usuário admin;
 
-   - `Entregue` quando o pedido terminar.
+   - `Entregue` quando o pedido for finalizado pelo usuário admin;.
 
-9. O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
+- O usuário admin deve ter o controle de alterar o status do pedido. Lembre-se de seguir princípio `Open/Closed` de _SOLID_ para está implementação de forma que possam ser acrescentados novos comportamentos e `status` sem impactar os status já existentes.
 
-10. Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
+- Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
-### Funcionalidade de chat, visão de cliente
+### Criar funcionalidade de chat na visão de cliente
 
-11. Essa funcionalidade só deve existir na **visão de cliente**
+- Essa funcionalidade só deve existir na **visão de cliente**
 
-12. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chat denominada `Conversar com a loja`.
+- Adicionar ao menu lateral, uma botão de chat denominada `Conversar com a loja`.
 
     - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
 
-13. Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
+- Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
 
     - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
 
-    - A página deve ter um input para envio de nova mensagem ao chat.
+    - A página deve ter um input para digitar o texto e um botão para envio de nova mensagem ao chat.
 
-14. O nickname de cliente deve ser o email cadastrado.
+- O nickname do cliente deve ser o email cadastrado.
 
-15. O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+- O chat deve conter tambem a hora que a mensagem foi enviada.
+
+- O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]**
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]**
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]**
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]**
+
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como preparando`]**
+
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]**
+
+**[Quando clicar no botão `Marcar como preparando` deve alterar o status do detalhe do pedido para `Preparando`]**
+
+**[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]**
+
+**[Quando clicar no botão `Marcar como entregue` os botões `Marcar como preparando` e `Marcar como entregue` devem sumir da tela]**
+
+**[Ao clicar no botão `Marcar como entregue` será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]**
+
+**[Ao clicar no botão `Marcar como preparando` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
+
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
+
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]**
+
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]**
+
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
 
 ### Funcionalidade de chat, visão de admin
 
@@ -185,6 +213,10 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 20. A lista de conversas deve ser ordenada pela data da última mensagem.
 
     - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
+
+### Testes
+
+1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
 ## Bônus
 
