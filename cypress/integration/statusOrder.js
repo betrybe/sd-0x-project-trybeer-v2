@@ -10,7 +10,6 @@ import {
   verifyElementContainsText,
   verifyElementNotVisible,
 } from '../actions/actionBase';
-const shell = require('shelljs');
     
 describe('Criar o status para o pedido', () => {
   beforeEach(() => {
@@ -49,12 +48,12 @@ describe('Criar o status para o pedido', () => {
     verifyContainsText('Pendente');
   });
 
-  it('Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como preparando`', () => {
+  it('Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar pedido`', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
     verifyElementVisible('[data-testid="mark-as-prepared-btn"]');
-    verifyElementContainsText('[data-testid="mark-as-prepared-btn"]', 'Marcar como preparando');
+    verifyElementContainsText('[data-testid="mark-as-prepared-btn"]', 'Preparar pedido');
   });
 
   it('Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`', () => {
@@ -65,7 +64,7 @@ describe('Criar o status para o pedido', () => {
     verifyElementContainsText('[data-testid="mark-as-delivered-btn"]', 'Marcar como entregue');
   });
 
-  it('Quando clicar no botão `Marcar como preparando` deve alterar o status do detalhe do pedido para `Preparando`', () => {
+  it('Quando clicar no botão `Preparar pedido` deve alterar o status do detalhe do pedido para `Preparando`', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
@@ -81,7 +80,7 @@ describe('Criar o status para o pedido', () => {
     verifyContainsText('Entregue');
   });
 
-  it('Quando clicar no botão `Marcar como entregue` os botões `Marcar como preparando` e `Marcar como entregue` devem sumir da tela', () => {
+  it('Quando clicar no botão `Marcar como entregue` os botões `Preparar pedido` e `Marcar como entregue` devem sumir da tela', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
@@ -99,7 +98,7 @@ describe('Criar o status para o pedido', () => {
     verifyElementContainsText('[data-testid="0-order-status"]', 'Entregue');
   });
 
-  it('Ao clicar no botão `Marcar como preparando` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`', () => {
+  it('Ao clicar no botão `Preparar pedido` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');

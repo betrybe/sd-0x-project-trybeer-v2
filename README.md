@@ -134,25 +134,16 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 - Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
-### Criar funcionalidade de chat na visão de cliente
+Tela do Detalhe pedido Administrador
 
-- Essa funcionalidade só deve existir na **visão de cliente**
 
-- Adicionar ao menu lateral, uma botão de chat denominada `Conversar com a loja`.
+- O botão 'Preparar pedido' deverá conter a tag `data-testid="mark-as-prepared-btn"`
 
-    - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+- O botão 'Meus Pedidos' deverá conter a tag `data-testid="side-menu-item-my-orders"`
 
-- Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
+- O botão 'Meu Perfil' deverá conter a tag `data-testid="side-menu-item-my-profile"`
 
-    - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
-
-    - A página deve ter um input para digitar o texto e um botão para envio de nova mensagem ao chat.
-
-- O nickname do cliente deve ser o email cadastrado.
-
-- O chat deve conter tambem a hora que a mensagem foi enviada.
-
-- O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+- O botão 'Sair' deverá conter a tag `data-testid="side-menu-item-logout"`
 
 ### Além disso,as seguintes verificações serão feitas:
 
@@ -185,6 +176,29 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 **[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]**
 
 **[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
+
+
+### Criar funcionalidade de chat na visão de cliente
+
+- Essa funcionalidade só deve existir na **visão de cliente**
+
+- Adicionar ao menu lateral, uma botão de chat denominada `Conversar com a loja`.
+
+    - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
+
+- Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
+
+    - A página deve mostrar as mensagens enviadas e recebidas, com as mensagens mais recentes mais embaixo.
+
+    - A página deve ter um input para digitar o texto e um botão para envio de nova mensagem ao chat.
+
+- O nickname do cliente deve ser o email cadastrado.
+
+- O chat deve conter tambem a hora que a mensagem foi enviada.
+
+- O histórico da conversa deve ser salvo no banco de dados `MondoDB` e aparecer quando a pessoa abre a página.
+
+
 
 ### Funcionalidade de chat, visão de admin
 
