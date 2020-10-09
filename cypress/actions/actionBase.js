@@ -78,6 +78,19 @@ export function accessProfileClient(){
   clickButton('[data-testid="side-menu-item-my-profile"]');
 }
 
+export function accessChatClient(){
+  clickButton('[data-testid="top-hamburguer"]');
+  clickButton('[data-testid="side-menu-chat"]');
+}
+
+export function getHour(){
+  const date = new Date();
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const tt = `${date.getHours()}:${('0'+new Date().getMinutes()).slice(-2)}`
+  return tt;
+}
+
 export function loginAndAddProductInCart(email, password) {
   insertText('[data-testid="email-input"]', email);
   insertText('[data-testid="password-input"]', password);
@@ -124,4 +137,12 @@ export function getDateAndMonth() {
   const date = new Date();
   const dateAndMonth = `${("0" + (date.getDate())).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}`
   return dateAndMonth;
+}
+
+export function clientSendMessage() {
+  accessHomeAndLogin();
+  accessChatClient();
+  insertText('[data-testid="message-input"]', 'Como anda meu pedido?');
+  clickButton('[data-testid="send-message"]');
+  logout();
 }
