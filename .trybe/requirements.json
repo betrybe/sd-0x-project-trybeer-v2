@@ -27,6 +27,10 @@
     {
       "description": "Criar botão no sidebar para acessar a lista de chats do admin",
       "bonus": false
+    },
+    {
+      "description": "Criar funcionalidade de lista de conversas de chat na visão de administrador",
+      "bonus": false
     }
   ]
 }

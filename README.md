@@ -321,11 +321,14 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Sidebar Administrador
 
+- O botão 'Conversas' deverá conter a tag `data-testid="side-menu-item-chat"`
+ 
 ![Chat do cliente](./public/sidebarAdmin.png)
 
 ### Além disso,as seguintes verificações serão feitas:
 
 **[Será validado que no meu sidebar contém o botão `Conversas`]**
+
 **[Será validado que ao clicar no menu `Conversas` será redirecionado para página na url `/admin/chats`]**
 
 ### 8 - Criar funcionalidade de lista de conversas de chat na visão de administrador
@@ -336,7 +339,31 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
 
+        - Um clique no email do cliente deve redirecioanar para a janela com o chat daquela conversa.
+
     - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
+
+### Tela de listas de conversas
+
+  - O texto `Nenhuma conversa por aqui` deverá conter o data-testid="text-for-no-conversation" 
+
+  - O texto com email do cliente deverá conter o `data-testid="profile-name"`
+
+  - O texto com a última mensagem deverá conter o `data-testid="last-message"`
+
+  - Os cards do chat devem conter o `data-testid="containerChat"`
+
+  ![Chat do cliente](./public/listadeconversas.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Será validado que ao entrar na tela de `admin/chats` e não houver conversas e validado se contém o texto `Nenhuma conversa por aqui`]**
+
+**[Será validado que ao entrar na tela de `admin/chats` e existir uma conversa verifico se contém o card]**
+
+**[Será validado que ao entrar na tela de `admin/chats` e existir uma conversa verifico se dentro do card contem o email do cliente]**
+
+**[Será validado que ao clicar no card da conversa e redirecionado pra conversa]**
 
 ### 9 - Desenvolver funcionalidade de chat na visão de administrador
 
@@ -355,13 +382,6 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 - A lista de conversas deve ser ordenada pela data da última mensagem.
 
     - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
-
-  botao  `chat` data-testid="side-menu-item-chat"
-  texto data-testid="text-for-no-conversation" Nenhuma conversa por aqui
-
-  http://localhost:3000/admin/chats 
-  texto com email do cliente data-testid="profile-name"
-  data-testid="last-message" Última mensagem às 1:34 PM
 
 
   input de mensagem data-testid="chat-message"
