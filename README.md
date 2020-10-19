@@ -237,11 +237,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]**
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]** DETALHE PEDIDO CLIENTE
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]**
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]** DETALHE PEDIDO CLIENTE
 
-**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]** DETALHE PEDIDO CLIENTE
 
 
 ### 2 - Criar botao no side bar para acessar o chat cliente

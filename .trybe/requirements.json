@@ -11,6 +11,10 @@
     {
       "description": "Desenvolver os status para o pedido da tela Pedidos do Cliente",
       "bonus": false
+    },
+    {
+      "description": "Desenvolver os status para o pedido da tela de Detalhe pedido Cliente",
+      "bonus": false
     }
   ]
 }
