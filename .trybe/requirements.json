@@ -35,6 +35,10 @@
     {
       "description": "Desenvolver funcionalidade de chat na visão de administrador",
       "bonus": false
+    },
+    {
+      "description": "Cobertura de testes unitários do back-end",
+      "bonus": false
     }
   ]
 }
