@@ -189,11 +189,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]**
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]** PEDIDOS
 
-**[Ao clicar no botão `Marcar como entregue` será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]**
+**[Dado que o pedido foi marcado como entregue será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]** PEDIDOS
 
-**[Ao clicar no botão `Preparar Pedido` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
+**[Dado que o pedido foi marcado como preparando será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]** PEDIDOS
 
 ### 3 - Desenvolver os status para o pedido da tela Pedidos do Cliente
 

@@ -3,6 +3,10 @@
     {
       "description": "Desenvolver os status para o pedido da tela de `Detalhe pedido` do Administrador",
       "bonus": false
+    },
+    {
+      "description": "Desenvolver os status para o pedido da tela `Pedidos` do Administrador",
+      "bonus": false
     }
   ]
 }
