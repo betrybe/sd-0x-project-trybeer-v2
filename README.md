@@ -255,6 +255,8 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Sidebar do Cliente
 
+- O botão 'Conversar com a loja' deverá conter a tag `data-testid="side-menu-chat"`
+
 ![Detalhe pedido Administrador](./public/sidebarCliente.png)
 
 ### Além disso,as seguintes verificações serão feitas:
@@ -283,13 +285,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Tela do Detalhe de chat do cliente
 
-- O botão 'Conversar com a loja' deverá conter a tag `data-testid="side-menu-chat"`
+- O elemento com o nickname do cliente deverá conter a tag `data-testid="nickname"`
 
-- A elemento com o nickname do cliente deverá conter a tag `data-testid="nickname"`
+- O elemento com a data da mensagem deverá conter a tag `data-testid="message-time"`
 
-- A elemento com a data da mensagem deverá conter a tag `data-testid="message-time"`
-
-- A elemento com a mensagem do cliente deverá conter a tag `data-testid="text-message"`
+- O elemento com a mensagem do cliente deverá conter a tag `data-testid="text-message"`
 
 - O input de escrever a mensagem deverá conter a tag `data-testid="message-input"`
 
@@ -299,25 +299,15 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-
-
 **[Será validado que existe o campo input e o botão de enviar mensagem]**
 
-**[Será validado que ao enviar mensagem o `nikname` do cliente é o seu email]**
+**[Será validado que ao enviar mensagem o `nickname` do cliente é o seu email]**
 
 **[Será validado que ao enviar mensagem a data fica visível na tela]**
 
 **[Será validado que ao enviar mensagem a mensagem fica visível na tela]**
 
 **[Será validado que ê possivel enviar várias mensagens]**
-
-
-
-
-
-
-
-
 
 ### 7 - Criar botao no side bar para acessar o chat adm
 
