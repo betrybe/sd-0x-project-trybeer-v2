@@ -417,7 +417,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 **[Será validado que é possivel enviar mensagem para o cliente e a mensagem poderá ser visualizada pelo cliente]**
 
-### 10 - Cobertura de testes unitários do back-end
+### 10 - Desenvolva a cobertura de testes unitários do back-end
 
 - A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
