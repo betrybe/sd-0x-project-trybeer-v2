@@ -309,19 +309,36 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 **[Será validado que ê possivel enviar várias mensagens]**
 
-### 7 - Criar botao no side bar para acessar o chat adm
-
-### 8 - Criar funcionalidade de chat na visão de administrador
+### 7 - Criar botão no sidebar para acessar a lista de chats do admin
 
 - Essa funcionalidade só deve existir na **visão de admin**
 
 - A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
 
-    - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
+    - Um clique no item descrito como `Conversas` deve levar para uma página de listas de chats.
+
+    - A rota da tela deve ser `/admin/chats`;
+
+### Sidebar Administrador
+
+![Chat do cliente](./public/sidebarAdmin.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Será validado que no meu sidebar contém o botão `Conversas`]**
+**[Será validado que ao clicar no menu `Conversas` será redirecionado para página na url `/admin/chats`]**
+
+### 8 - Criar funcionalidade de lista de conversas de chat na visão de administrador
+
+- Essa funcionalidade só deve existir na **visão de admin**
+
+- A paginá deverá conter uma lista de conversas lista com todas as conversas da loja.
 
     - As conversas devem aparecer numa lista. Cada conversa deve ser identificada pelo email da pessoa cliente em questão.
 
     - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
+
+### 9 - Desenvolver funcionalidade de chat na visão de administrador
 
 - Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
 
@@ -368,14 +385,14 @@ botao voltar data-testid="back-button"
 **[]**
 **[]**
 
-### 9 - Testes Unitarios back-end
+### 10 - Testes Unitarios back-end
 
 1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
 ## Bônus
 
 
-### 10 - deploy do projeto
+### 11 - deploy do projeto
 remover e virar so um onde acesso o projeto  e crio um usuario e verifico se criou
 
 ### Deploy Heroku
@@ -392,7 +409,7 @@ remover e virar so um onde acesso o projeto  e crio um usuario e verifico se cri
 
     - `monitoring-run.sh`.
 
-### 11 - Testes unitarios front-end
+### 12 - Testes unitarios front-end
 
 - A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
