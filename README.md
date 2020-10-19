@@ -440,7 +440,7 @@ remover e virar so um onde acesso o projeto  e crio um usuario e verifico se cri
 
     - `monitoring-run.sh`.
 
-### 12 - Testes unitarios front-end
+### 12 - Desenvolva a cobertura de testes unitários do front-end
 
 - A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 

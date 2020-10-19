@@ -39,6 +39,10 @@
     {
       "description": "Desenvolva a cobertura de testes unitários do back-end",
       "bonus": false
+    },
+    {
+      "description": "Desenvolva a cobertura de testes unitários do front-end",
+      "bonus": true
     }
   ]
 }
