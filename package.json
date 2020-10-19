@@ -9,6 +9,9 @@
     "start-back": "npm --prefix back-end/ run start&",
     "install-front": "npm --prefix front-end/ install",
     "start-front": "npm --prefix front-end/ run start&",
+    "drop": "cd back-end/ && npx sequelize-cli db:drop $",
+    "seed": "cd back-end/ && npx sequelize-cli db:seed:all $",
+    "prestart": "cd back-end/ && npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open"
   },
