@@ -42,6 +42,15 @@ describe('Criar funcionalidade de lista de conversas de chat na visão de admini
     verifyElementContainsText('[data-testid="profile-name"]', 'zebirita@gmail.com');
   });
 
+  it('Será validado que ao entrar na tela de `admin/chats` e existir uma conversa verifico se dentro do card contem data da ultima mensagem', () => {
+    clientSendMessage();
+    cy.visit(`${Cypress.config().baseUrl}/login`);
+    login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
+    clickButton('[data-testid="side-menu-item-chat"]');
+    cy.reload();
+    verifyElementVisible('[data-testid="last-message"]');
+  });
+
   it('Será validado que ao clicar no card da conversa e redirecionado pra conversa', () => {
     clientSendMessage();
     cy.visit(`${Cypress.config().baseUrl}/login`);
