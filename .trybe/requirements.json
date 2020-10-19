@@ -7,6 +7,10 @@
     {
       "description": "Desenvolver os status para o pedido da tela `Pedidos` do Administrador",
       "bonus": false
+    },
+    {
+      "description": "Desenvolver os status para o pedido da tela Pedidos do Cliente",
+      "bonus": false
     }
   ]
 }

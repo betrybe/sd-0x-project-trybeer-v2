@@ -155,7 +155,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 - O botão 'Preparar pedido' deverá conter a tag `data-testid="mark-as-prepared-btn"`
 
-![Detalhe pedido Administrador](./public/detalhepedidoadmin.png)
+![Tela de detalhes pedidos Administrador](./public/detalhepedidoadmin.png)
 
 ### Além disso,as seguintes verificações serão feitas:
 
@@ -185,7 +185,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Tela de `Pedido` do Administrador
 
-![Detalhe pedido Administrador](./public/pedidosadmin.png)
+![Tela de pedido Administrador](./public/pedidosadmin.png)
 
 ### Além disso,as seguintes verificações serão feitas:
 
@@ -209,15 +209,15 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Tela de `Pedidos` do Cliente
 
-![Detalhe pedido Administrador](./public/pedidoscliente.png)
+![Tela pedidos de cliente](./public/pedidoscliente.png)
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]**
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]** CLIENTE PEDIDO
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]** CLIENTE PEDIDO
 
-**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]**
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]** CLIENTE PEDIDO
 
 ### 4 - Desenvolver os status para o pedido da tela de Detalhe pedido Cliente
 
