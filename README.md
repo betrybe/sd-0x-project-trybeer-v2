@@ -59,6 +59,23 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ---
 
+### Análise Estática 
+
+Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
+
+Este projeto já vem com as dependências relacionadas ao _linter_ configuradas nos arquivos `package.json` nos seguintes caminhos:
+
+- `sd-0x-trybeer/back-end/package.json`
+- `sd-0x-trybeer/front-end/package.json`
+
+Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install` dentro do projeto e depois `npm run lint`. Se a análise do `ESLint` encontrar problemas no seu código, tais problemas serão mostrados no seu terminal. Se não houver problema no seu código, nada será impresso no seu terminal.
+
+Devido ao fato de as configurações das regras do `ESLint` dos projetos de front e back **serem diferentes**, **é preciso executar o `ESLint` em cada projeto**.
+
+Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+---
+
 ## O que deverá ser desenvolvido
 
 Esse projeto é uma continuação do projeto `Trybeer`! Ou seja, o _commit_ inicial nesse repositório será todo o projeto que foi desenvolvido por vocês anteriormente. Logo, esse será o ponto de partida de vocês para esse projeto.
@@ -102,7 +119,7 @@ Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os
 
 ##### Você também deve **escrever testes unitários que devem cobrir pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
 
-⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
+⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **ESLint** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
 
 O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e outra pessoa possa aceitar esse pedido no **admin**.
 
@@ -118,7 +135,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ## Requisitos do projeto
 
-### Criar o status para o pedido
+### 1 - Desenvolver os status para o pedido da tela de `Detalhe pedido` do Administrador
 
 - Todo pedido realizado deve ter um status referente ao seu progresso atual.
 
@@ -134,7 +151,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 - Qualquer atualização feita no pedido pelo usuário admin deve se refletir em tempo real para o cliente.
 
-### Tela do Detalhe pedido Administrador
+### Tela de `Detalhe pedido` Administrador
 
 - O botão 'Preparar pedido' deverá conter a tag `data-testid="mark-as-prepared-btn"`
 
@@ -142,37 +159,94 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]**
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]** DETALHES PEDIDOS
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]**
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar Pedido`]** DETALHES PEDIDOS
+
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]** DETALHES PEDIDOS
+
+**[Quando clicar no botão `Preparar pedido` deve alterar o status do detalhe do pedido para `Preparando`]** DETALHES PEDIDOS
+
+**[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]** DETALHES PEDIDOS
+
+**[Quando clicar no botão `Marcar como entregue` os botões `Preparar pedido` e `Marcar como entregue` devem sumir da tela]** DETALHES PEDIDOS
+
+### 2 - Desenvolver os status para o pedido da tela `Pedidos` do Administrador
+
+- Todo pedido realizado deve ter um status referente ao seu progresso atual.
+
+- Os `status` do pedido devem ser os seguintes:
+
+   - `Pendente` logo quando o pedido for criado;
+
+   - `Preparando` quando o pedido for iniciado pelo usuário admin;
+
+   - `Entregue` quando o pedido for finalizado pelo usuário admin;
+
+### Tela de `Pedido` do Administrador
+
+![Detalhe pedido Administrador](./public/pedidosadmin.png)
+
+### Além disso,as seguintes verificações serão feitas:
 
 **[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]**
-
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]**
-
-**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar Pedido`]**
-
-**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]**
-
-**[Quando clicar no botão `Preparar Pedido` deve alterar o status do detalhe do pedido para `Preparando`]**
-
-**[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]**
-
-**[Quando clicar no botão `Marcar como entregue` os botões `Preparar Pedido` e `Marcar como entregue` devem sumir da tela]**
 
 **[Ao clicar no botão `Marcar como entregue` será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]**
 
 **[Ao clicar no botão `Preparar Pedido` será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
+### 3 - Desenvolver os status para o pedido da tela Pedidos do Cliente
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]**
+- Todo pedido realizado deve ter um status referente ao seu progresso atual.
+
+- Os `status` do pedido devem ser os seguintes:
+
+   - `Pendente` logo quando o pedido for criado;
+
+   - `Preparando` quando o pedido for iniciado pelo usuário admin;
+
+   - `Entregue` quando o pedido for finalizado pelo usuário admin;.
+
+### Tela de `Pedidos` do Cliente
+
+![Detalhe pedido Administrador](./public/pedidoscliente.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]**
+
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
 
 **[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]**
 
+### 4 - Desenvolver os status para o pedido da tela de Detalhe pedido Cliente
+
+- Todo pedido realizado deve ter um status referente ao seu progresso atual.
+
+- Os `status` do pedido devem ser os seguintes:
+
+   - `Pendente` logo quando o pedido for criado;
+
+   - `Preparando` quando o pedido for iniciado pelo usuário admin;
+
+   - `Entregue` quando o pedido for finalizado pelo usuário admin;.
+
+### Tela de `Detalhes de Pedido` do Cliente
+
+![Detalhe pedido Administrador](./public/detalhespedidocliente.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]**
+
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]**
+
 **[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
 
-### Criar funcionalidade de chat na visão de cliente
+
+### 2 - Criar botao no side bar para acessar o chat cliente
+
+### 2 - Desenvolver funcionalidade de chat na visão de cliente
 
 - Essa funcionalidade só deve existir na **visão de cliente**
 
@@ -226,11 +300,21 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 **[Será validado que ê possivel enviar várias mensagens]**
 
-### Funcionalidade de chat, visão de admin
 
-16. Essa funcionalidade só deve existir na **visão de admin**
 
-17. A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
+
+
+
+
+
+
+### 2 - Criar botao no side bar para acessar o chat adm
+
+### 3 - Criar funcionalidade de chat na visão de administrador
+
+- Essa funcionalidade só deve existir na **visão de admin**
+
+- A plataforma deve ter acessível, no menu lateral, uma funcionalidade de chats denominada `Conversas`.
 
     - Um clique no botão `Conversas` direciona para uma página que lista todas as conversas da loja.
 
@@ -238,7 +322,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
 
-18. Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
+- Um clique num item da lista de conversas deve exibir na tela o respectivo chat.
 
     - Um clique em um item da lista deve exibir na tela a janela com o chat daquela conversa.
 
@@ -248,29 +332,48 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - A página da conversa deve ter um botão de voltar que ao ser clicado redireciona a pessoa a página de listagem de conversas novamente.
 
-19. O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
+- O histórico de cada conversa deve ser salvo no banco de dados e aparecer quando a pessoa abre a página.
 
-20. A lista de conversas deve ser ordenada pela data da última mensagem.
+- A lista de conversas deve ser ordenada pela data da última mensagem.
 
     - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
 
-### Testes
+  botao  `chat` data-testid="side-menu-item-chat"
+  texto data-testid="text-for-no-conversation" Nenhuma conversa por aqui
+
+  http://localhost:3000/admin/chats 
+  texto com email do cliente data-testid="profile-name"
+  data-testid="last-message" Última mensagem às 1:34 PM
+
+
+  input de mensagem data-testid="chat-message"
+  botao de enviar data-testid="send-message-btn"
+
+chat 
+
+email da msg data-testid="nickname"
+tempo da mensagem data-testid="message-time"
+texto da mensagem data-testid="text-message"
+botao voltar data-testid="back-button"
+
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+**[]**
+
+### 4- Testes Unitarios back-end
 
 1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
 ## Bônus
 
-### Funcionalidade de chat, visão de admin: envio de mensagens em broadcast
-
-21. Essa funcionalidade só deve existir na **visão de admin**
-
-22. Na página de chats deve haver um botão identificado com `Nova linha de transmissão`:
-
-    - Ao clicar no botão, deve-se disponibilizar a lista de conversas disponíveis e, ao lado de cada uma, deve haver uma checkbox;
-
-    - O usuário admin da loja deve ser capaz de selecionar as checkboxes das conversas que quiser e, através de um input, enviar uma mesma mensagem a todas essas conversas ao mesmo tempo;
-
-    - A página deve fazer uma validação para garantir que, no momento desse envio, ao menos uma conversa esteja selecionada.
+remover e virar so um onde acesso o projeto  e crio um usuario e verifico se criou
 
 ### Deploy Heroku
 
