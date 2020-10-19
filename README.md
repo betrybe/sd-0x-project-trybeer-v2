@@ -159,17 +159,17 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]** DETALHES PEDIDOS
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do admin]**
 
-**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar Pedido`]** DETALHES PEDIDOS
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Preparar Pedido`]**
 
-**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]** DETALHES PEDIDOS
+**[Será validado que o administrador ao acessar um determinado pedido ele deve visualizar o botão `Marcar como entregue`]**
 
-**[Quando clicar no botão `Preparar pedido` deve alterar o status do detalhe do pedido para `Preparando`]** DETALHES PEDIDOS
+**[Quando clicar no botão `Preparar pedido` deve alterar o status do detalhe do pedido para `Preparando`]**
 
-**[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]** DETALHES PEDIDOS
+**[Quando clicar no botão `Marcar como entregue` deve alterar o status do detalhe do pedido para `Entregue`]**
 
-**[Quando clicar no botão `Marcar como entregue` os botões `Preparar pedido` e `Marcar como entregue` devem sumir da tela]** DETALHES PEDIDOS
+**[Quando clicar no botão `Marcar como entregue` os botões `Preparar pedido` e `Marcar como entregue` devem sumir da tela]**
 
 ### 2 - Desenvolver os status para o pedido da tela `Pedidos` do Administrador
 
@@ -189,11 +189,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]** PEDIDOS
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Pedidos` do admin]**
 
-**[Dado que o pedido foi marcado como entregue será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]** PEDIDOS
+**[Dado que o pedido foi marcado como entregue será validado que na tela de `Pedidos` do admin, o status estará como `Entregue`]**
 
-**[Dado que o pedido foi marcado como preparando será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]** PEDIDOS
+**[Dado que o pedido foi marcado como preparando será validado que na tela de `Pedidos` do admin, o status estará como `Preparando`]**
 
 ### 3 - Desenvolver os status para o pedido da tela Pedidos do Cliente
 
@@ -213,11 +213,11 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]** CLIENTE PEDIDO
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente]**
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]** CLIENTE PEDIDO
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`]**
 
-**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]** CLIENTE PEDIDO
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`]**
 
 ### 4 - Desenvolver os status para o pedido da tela de Detalhe pedido Cliente
 
@@ -237,16 +237,13 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]** DETALHE PEDIDO CLIENTE
+**[Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente]**
 
-**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]** DETALHE PEDIDO CLIENTE
+**[Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`]**
 
-**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]** DETALHE PEDIDO CLIENTE
+**[Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`]**
 
-
-### 2 - Criar botao no side bar para acessar o chat cliente
-
-### 2 - Desenvolver funcionalidade de chat na visão de cliente
+### 5 - Criar um botão no sidebar para acessar o chat do cliente
 
 - Essa funcionalidade só deve existir na **visão de cliente**
 
@@ -255,6 +252,20 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
     - Um clique no item descrito como `Conversar com a loja` deve levar para uma página de chat.
 
     - A rota da tela deve ser `/chat`;
+
+### Sidebar do Cliente
+
+![Detalhe pedido Administrador](./public/sidebarCliente.png)
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Será validado que o botão `Conversar com a loja` existe no sidebar do cliente]**
+
+**[Será validado que ao clicar no menu `Conversar com a loja` será redirecionado para página na url `/chat`]**
+
+### 6 - Desenvolver funcionalidade de chat na visão de cliente
+
+- Essa funcionalidade só deve existir na **visão de cliente**
 
 - Na página de chat, as mensagens devem aparecer ordenadas com as mais recentes embaixo.
 
@@ -288,7 +299,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Além disso,as seguintes verificações serão feitas:
 
-**[Será validado que ao clicar no menu `Conversar com a loja` será redirecionado para página na url `/chat`]**
+
 
 **[Será validado que existe o campo input e o botão de enviar mensagem]**
 
@@ -308,9 +319,9 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 
 
-### 2 - Criar botao no side bar para acessar o chat adm
+### 7 - Criar botao no side bar para acessar o chat adm
 
-### 3 - Criar funcionalidade de chat na visão de administrador
+### 8 - Criar funcionalidade de chat na visão de administrador
 
 - Essa funcionalidade só deve existir na **visão de admin**
 
@@ -367,12 +378,14 @@ botao voltar data-testid="back-button"
 **[]**
 **[]**
 
-### 4- Testes Unitarios back-end
+### 9 - Testes Unitarios back-end
 
 1. A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
 
 ## Bônus
 
+
+### 10 - deploy do projeto
 remover e virar so um onde acesso o projeto  e crio um usuario e verifico se criou
 
 ### Deploy Heroku
@@ -389,9 +402,9 @@ remover e virar so um onde acesso o projeto  e crio um usuario e verifico se cri
 
     - `monitoring-run.sh`.
 
-### Testes
+### 11 - Testes unitarios front-end
 
-25. A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
+- A cobertura de testes unitários do front-end deve ser de, no mínimo, 90%.
 
 ---
 
