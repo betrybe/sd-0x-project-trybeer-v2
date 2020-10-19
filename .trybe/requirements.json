@@ -31,6 +31,10 @@
     {
       "description": "Criar funcionalidade de lista de conversas de chat na visão de administrador",
       "bonus": false
+    },
+    {
+      "description": "Desenvolver funcionalidade de chat na visão de administrador",
+      "bonus": false
     }
   ]
 }

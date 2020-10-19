@@ -341,6 +341,8 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
         - Um clique no email do cliente deve redirecioanar para a janela com o chat daquela conversa.
 
+    - A lista de conversas deve ser ordenada pela data da última mensagem.
+
     - Caso não tenham conversas, deve ser exibido o texto "Nenhuma conversa por aqui".
 
 ### Tela de listas de conversas
@@ -363,6 +365,8 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 **[Será validado que ao entrar na tela de `admin/chats` e existir uma conversa verifico se dentro do card contem o email do cliente]**
 
+**[Será validado que ao entrar na tela de `admin/chats` e existir uma conversa verifico se dentro do card contem data da ultima mensagem]**
+
 **[Será validado que ao clicar no card da conversa e redirecionado pra conversa]**
 
 ### 9 - Desenvolver funcionalidade de chat na visão de administrador
@@ -383,27 +387,35 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
     - A lista de conversas deve ser ordenada pela data da última mensagem (recebida ou enviada), as mais recentes no topo da lista.
 
+### Tela de chat do admin
 
-  input de mensagem data-testid="chat-message"
-  botao de enviar data-testid="send-message-btn"
+![Chat do cliente](./public/chatadmin.png)
 
-chat 
+  - O campo input de mensagem deverá conter a tag `data-testid="chat-message"`
 
-email da msg data-testid="nickname"
-tempo da mensagem data-testid="message-time"
-texto da mensagem data-testid="text-message"
-botao voltar data-testid="back-button"
+  - O botão de enviar mensagem deverá conter a tag `data-testid="send-message-btn"`
 
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
-**[]**
+- O email da mensagem deverá conter a tag `data-testid="nickname"`
+
+- A hora da mensagem deverá conter a tag `data-testid="message-time"`
+
+- O texto da mensagem deverá conter a tag `data-testid="text-message"`
+
+- O botão voltar deverá conter a tag `data-testid="back-button"`
+
+### Além disso,as seguintes verificações serão feitas:
+
+**[Será validado que ao clicar no card da conversa poderá ser visualizado as mensagem do cliente]**
+
+**[Será validado que é possivel enviar mensagem]**
+
+**[Será validado que ao enviar mensagem o nickname do admin e `Loja`]**
+
+**[Será validado que ao enviar mensagem e listado a hora do envio da mensagem]**
+
+**[Será validado que é possivel voltar pra tela de `admin/chat` através do botão voltar]**
+
+**[Será validado que é possivel enviar mensagem para o cliente e a mensagem poderá ser visualizada pelo cliente]**
 
 ### 10 - Testes Unitarios back-end
 
