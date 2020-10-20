@@ -65,8 +65,8 @@ Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu 
 
 Este projeto já vem com as dependências relacionadas ao _linter_ configuradas nos arquivos `package.json` nos seguintes caminhos:
 
-- `sd-0x-trybeer/back-end/package.json`
-- `sd-0x-trybeer/front-end/package.json`
+- `sd-0x-project-trybeer-v2/back-end/package.json`
+- `sd-0x-project-trybeer-v2/front-end/package.json`
 
 Para poder rodar os `ESLint` em um projeto basta executar o comando `npm install` dentro do projeto e depois `npm run lint`. Se a análise do `ESLint` encontrar problemas no seu código, tais problemas serão mostrados no seu terminal. Se não houver problema no seu código, nada será impresso no seu terminal.
 
@@ -132,6 +132,105 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 - O projeto deve passar a utilizar o _ORM Sequelize_ ao invés do driver do _MySQL_.
 
 - Crie quantos `seeders` e quantas `migrations` quiser. Porém, lembre-se de criar todas as `migrations` necessárias para que o projeto seja gerado 100% funcional utilizando o banco de dados arquitetado por você. O arquivo `.sql`, contendo as _queries_ de criação/configuração do banco, não será mais necessário, visto que o projeto passará a utilizar `migrations` e `seeders`. Estes devem, portanto, ser removidos.
+
+### 👀Observações importantes:
+
+Haverá uma pasta chamada `seeders` onde já contém a população do banco MYSQL(não remova, pois a automação ê baseada nela).
+
+Para rodar os arquivos basta rodar esse comando:
+
+`npm run seed` - para popular o banco.
+
+Assim o banco e terá alguns dados inseridos. 
+
+**É essencial seguir esses passos!**
+
+**Faça essas configurações para as variáveis de ambiente usadas nesses arquivos:**
+
+1 - Passo
+
+Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2/back-end/config/config.js`
+
+```javascript
+module.exports = {
+  "development": {
+    "username": process.env.MYSQL_USER,
+    "password": process.env.MYSQL_PASSWORD, 
+    "database": process.env.SCHEMA, 
+    "host": process.env.HOSTNAME,
+    "dialect": 'mysql',
+  },
+  "test": {
+    "username": process.env.MYSQL_USER,
+    "password": process.env.MYSQL_PASSWORD,
+    "database": process.env.SCHEMA,
+    "host": process.env.HOSTNAME,
+    "dialect": "mysql",
+  },
+  "production": {
+    "username": process.env.MYSQL_USER,
+    "password": process.env.MYSQL_PASSWORD,
+    "database": process.env.SCHEMA,
+    "host": process.env.HOSTNAME,
+    "dialect": 'mysql',
+  },
+};
+```
+
+**(Neste arquivo e obrigatório deixar o nome do database como `"database": 'Trybeer'`)**
+
+2 - Passo
+
+Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2/cypress/plugins/index.js`. Neste arquivo, na linha 44, Haverá a seguinte comando:
+
+`config.env.gitHubUser = process.env.GITHUB_USER;`
+
+OBS: O valor da variável `GITHUB_USER` deverá ser o mesmo nome do seu usuário do github.
+
+3 - Passo
+
+Quando for criar a conexão com o `MONGODB` crie duas variáveis de ambiente `process.env.DB_URL` e `process.env.DB_NAME` e configure o banco conforme exemplo abaixo:
+
+```javascript
+const mongoClient = require('mongodb').MongoClient;
+require('dotenv').config();
+
+let schema = null;
+
+const connection = async () => {
+  if (schema) return Promise.resolve(schema);
+
+  return mongoClient
+  .connect(process.env.DB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((conn) => conn.db(process.env.DB_NAME))
+  .then((dbSchema) => {
+    schema = dbSchema;
+    return schema;
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+module.exports = connection; 
+```
+
+Onde a variável `process.env.DB_URL` será a url do banco exemplo abaixo:
+
+`DB_URL=mongodb://localhost:27017`
+
+E a variável `process.env.DB_NAME` e o nome do banco com exemplo abaixo:
+
+`DB_NAME=Trybeer`
+
+4 - Passo
+
+OBS: Haverá um arquivo de conexão com o mongodb já pronto no caminho `sd-0x-project-trybeer-v2/cypress/plugins/connection.js`, ele é usado para o avaliador, então não se esqueça de adicionar essas variáveis na pasta raiz tambem para poder rodar local.
+
+**Você irá precisar configurar as variáveis globais do MySQL.** Você pode usar esse [Conteúdo de variáveis de ambiente com NodeJS](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/) como referência.
 
 ## Requisitos do projeto
 
@@ -427,7 +526,7 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ### Deploy Heroku
 
-IMPORTANTE: Uma variável de ambiente com o nome `GITHUB_USER` deverá ser criada com o seu usuário do github.
+IMPORTANTE: Crie uma variável de ambiente com o nome `GITHUB_USER` deverá ser criada com o seu usuário do github.
 
 ### Faça o deploy do front-end:
 
