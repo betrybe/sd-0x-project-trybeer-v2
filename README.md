@@ -423,22 +423,31 @@ O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e ou
 
 ## Bônus
 
-### 11 - deploy do projeto
-remover e virar so um onde acesso o projeto  e crio um usuario e verifico se criou
+### 11 - Realizar o deploy do projeto back-end e front-end
 
 ### Deploy Heroku
 
-23. Faça _scripts bash_ contendo a sequência de comandos necessários para realizar o deploy via Heroku tanto para o **front-end** quanto para o **back-end**. Os scripts devem ter os seguintes nomes:
+IMPORTANTE: Uma variável de ambiente com o nome `GITHUB_USER` deverá ser criada com o seu usuário do github.
 
-    - `deploy-front-end.sh`;
+### Faça o deploy do front-end:
 
-    - `deploy-back-end.sh`.
+Crie um app do Heroku com o front-end. Não é necessário a criação do Procfile aqui. Vamos deixar o Heroku utilizar as configurações padrões. No momento de criar o app do Heroku, utilize o buildpack descrito abaixo, em Dicas.
 
-### Monitoramento do Back-End
+O nome do seu app no heroku deve ser seu nome de usuário do github seguido de "-front". Por exemplo, se o seu usuário do github for "joao", o nome do seu app será "joao-front" e a url precisar ser https://joao-front.herokuapp.com/.
 
-24. Faça um _script bash_ contendo a sequência de comandos necessários para realizar o monitoramento da `API` via _PM2_. O script deve ter o seguinte nome:
+ ### Faça o deploy do back-end:
 
-    - `monitoring-run.sh`.
+Crie um app do Heroku com o back-end. Não é necessário a criação do Procfile aqui. Vamos deixar o Heroku utilizar as configurações padrões. No momento de criar o app do Heroku, utilize o buildpack descrito abaixo, em Dicas.
+
+O nome do seu app no heroku deve ser seu nome de usuário do github seguido de "-back". Por exemplo, se o seu usuário do github for "joao", o nome do seu app será "joao-back" e a url precisar ser https://joao-back.herokuapp.com/.
+
+Configure as variáveis de ambiente do app para apontar para as API's publicadas.
+
+Faça o deploy com o git.
+
+**[Sera validado se é possivel acessar a aplicação e verificar se estou na tela url de login]**
+
+**[Será validado que é possível fazer cadastro de um cliente com sucesso e ser redirecionado para tela de produtos]**
 
 ### 12 - Desenvolva a cobertura de testes unitários do front-end
 
