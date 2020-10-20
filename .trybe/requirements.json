@@ -41,6 +41,10 @@
       "bonus": false
     },
     {
+      "description": "Realizar o deploy do projeto back-end e front-end",
+      "bonus": true
+    },
+    {
       "description": "Desenvolva a cobertura de testes unitários do front-end",
       "bonus": true
     }

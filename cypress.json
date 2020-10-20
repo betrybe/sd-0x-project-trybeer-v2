@@ -14,6 +14,7 @@
         "login": "zebirita@gmail.com",
         "password": "12345678",
         "loginAdmin": "tryber@trybe.com.br",
-        "passwordAdmin": "12345678"
+        "passwordAdmin": "12345678",
+        "url": ""
       }
   }

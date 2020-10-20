@@ -40,4 +40,7 @@ module.exports = (on, config) => {
     }
     return launchOptions;
   });
+
+  config.env.url = process.env.GITHUB_USER;
+  return config; 
 }
