@@ -33,6 +33,7 @@ jobs:
           MYSQL_PASSWORD: 'password'
           HOSTNAME: 'mysql'
           DB_URL: 'mongodb://mongodb:27017'
+          SCHEMA: 'Trybeer'
           DB_NAME: 'Trybeer'
           GITHUB_USER: ${{ github.actor }} 
       - name: Store evaluation step
