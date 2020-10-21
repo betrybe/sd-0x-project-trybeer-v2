@@ -32,7 +32,7 @@ jobs:
           MYSQL_USER: 'root'
           MYSQL_PASSWORD: 'password'
           HOSTNAME: 'mysql'
-          DB_URL: 'mongodb://mongodb:27017'
+          DB_URL: 'mongodb://mongodb:27017/Trybeer'
           SCHEMA: 'Trybeer'
           DB_NAME: 'Trybeer'
           GITHUB_USER: ${{ github.actor }} 
