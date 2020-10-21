@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { users } = require('../models');
 
-const jwtSecret = process.env.JWT_SECRET;
+const jwtSecret = process.env.JWT_SECRET || '1231414';
 
 const jwtConfig = {
   expiresIn: '300m',
