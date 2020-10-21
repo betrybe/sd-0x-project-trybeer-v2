@@ -1,0 +1,25 @@
+.order-card-container {
+  background-color: white;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  height: 20vh;
+  justify-content: space-around;
+  margin: 5%;
+  width: 90%;
+}
+
+.order-card-top-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 90%;
+}
+
+.order-card-bot-content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  width: 90%;
+}

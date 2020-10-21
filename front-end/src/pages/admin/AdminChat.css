@@ -1,0 +1,92 @@
+.containerAllChats {
+  display: flex;
+}
+
+.messagesBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.admin-chat-container {
+  padding: 1% 0;
+}
+
+.client-chat-container {
+  padding: 1% 0;
+}
+
+.message-container {
+  align-self: center;
+  padding: 1% 0;
+}
+
+.admin-li-header > span {
+  color: black;
+  font-weight: 700;
+}
+
+.client-li-header > span {
+  color: green;
+  font-weight: 700;
+}
+
+.back-button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.chatContainer > a {
+  all: unset;
+  color: black;
+}
+
+.back-button-message {
+  font-size: 3vh;
+}
+
+.all-chats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70vw;
+}
+
+.containerChat {
+  border: 2px black solid;
+  cursor: pointer;
+  margin: 3vw;
+  padding: 1%;
+  width: 30vw;
+}
+
+.containerTime {
+  margin-top: 2%;
+}
+
+.noMsg {
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+.li-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media ( max-width : 800px ) {
+
+  .containerChat {
+    width: 60vw;
+  }
+
+  .noMsg {
+    font-size: 2vh;
+  }
+}

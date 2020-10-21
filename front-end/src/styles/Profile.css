@@ -1,0 +1,50 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-between;
+}
+
+.profile-top-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.email-label {
+  margin-top: 20px;
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.name-label {
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.email-label input {
+  height: 100%;
+  width: 100%;
+}
+
+.name-label input {
+  height: 100%;
+  width: 100%;
+}
+
+.profile-bot-container button {
+  background-color: green;
+  margin: 0 10px;
+  width: 90%;
+}
+
+.profile-bot-container button:disabled {
+  background-color: gray;
+  margin: 0 10px;
+  width: 90%;
+}

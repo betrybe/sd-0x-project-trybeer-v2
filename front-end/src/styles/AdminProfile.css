@@ -1,0 +1,9 @@
+.admin-profile-header {
+  margin-left: 5%;
+  text-align: left;
+  width: 100%;
+}
+
+.admin-profile-flex-container {
+  display: flex;
+}

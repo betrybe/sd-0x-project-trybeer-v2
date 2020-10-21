@@ -1,0 +1,52 @@
+.register-page-container {
+  height: 100vh;
+}
+
+.register-form-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-around;
+  margin-top: 30%;
+}
+
+.label-Nome {
+  margin-left: 10%;
+  text-align: left;
+}
+
+.label-Email {
+  margin-left: 10%;
+  text-align: left;
+}
+
+.label-Password {
+  margin-left: 10%;
+  text-align: left;
+}
+
+.label-Quero {
+  margin-left: 10%;
+  text-align: left;
+}
+
+.label-Nome input {
+  text-align: left;
+  width: 80%;
+}
+
+.label-Email input {
+  text-align: left;
+  width: 80%;
+}
+
+.label-Password input {
+  text-align: left;
+  width: 80%;
+}
+
+.label-Quero input {
+  text-align: left;
+  width: 80%;
+}

@@ -1,0 +1,18 @@
+.products-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 90%;
+  padding: 10%;
+}
+
+.product-card {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 0.3em;
+  max-height: 150px;
+  max-width: 40%;
+  min-height: 165px;
+  padding: 8px;
+}

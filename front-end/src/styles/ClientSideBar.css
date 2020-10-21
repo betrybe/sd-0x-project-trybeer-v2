@@ -1,0 +1,37 @@
+.side-menu-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  position: absolute;
+  width: 30%;
+  z-index: 3;
+}
+
+.side-menu-top-container {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-around;
+  margin: 2%;
+}
+
+.side-menu-bot-container {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+}
+
+.side-menu-top-container button {
+  border: white 1px solid;
+  color: white;
+}
+
+.side-menu-bot-container button {
+  border: white 1px solid;
+  color: white;
+  height: 10%;
+  width: 95%;
+}

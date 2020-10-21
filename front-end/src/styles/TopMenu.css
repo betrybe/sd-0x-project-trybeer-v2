@@ -1,0 +1,26 @@
+.top-menu-container {
+  align-items: center;
+  background: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-height: 20%;
+  min-width: 100%;
+}
+
+.header-title {
+  color: white;
+}
+
+.hamburguer-button {
+  all: unset;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+
+.hamburger-menu-icon {
+  fill: white;
+  height: 50px;
+  width: 50px;
+}

@@ -1,0 +1,44 @@
+.order-card-link {
+  text-decoration: none;
+}
+
+.order-card-text {
+  font-weight: 600;
+}
+
+.order-card-container {
+  align-items: flex-start;
+  background-color: white;
+  border: black 1px solid;
+  color: black;
+  flex-flow: column nowrap;
+  font-size: 0.5em;
+  justify-content: space-between;
+  margin: 5%;
+  min-height: 25vh;
+}
+
+.order-card-address {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.order-card-top-content {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 0.8em;
+  font-weight: 400;
+  padding: 0 5%;
+}
+
+.order-card-bot-content {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.order-card-status {
+  background: gray;
+}

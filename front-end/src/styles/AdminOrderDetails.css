@@ -1,0 +1,82 @@
+.admin-orders-details-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  min-height: 400px;
+  text-align: left;
+  width: 100%;
+}
+
+.orders-details-header {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 10px 0 0 5%;
+}
+
+.products-container {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.products-unordered-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.product-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.product-unitary-price {
+  font-size: 0.6em;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.total-value-container {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  font-weight: 800;
+  height: inherit;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order-total-value {
+  align-self: flex-end;
+  font-size: 1.5em;
+}
+
+.mark-as-delivered-btn {
+  align-self: flex-end;
+  background: #0fea76;
+  font-weight: 800;
+  height: 40px;
+  margin: 5px 5% 5px 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.mark-as-prepared-btn {
+  align-self: flex-end;
+  background: yellow;
+  font-weight: 800;
+  height: 40px;
+  margin: 5px 5% 5px 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.admin-orders-details-flex-container {
+  display: flex;
+}
