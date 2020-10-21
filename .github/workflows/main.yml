@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Evaluator step
         id: evaluator
-        uses: betrybe/cypress-evaluator-action@v4
+        uses: betrybe/cypress-evaluator-action@headless-browser-chrome
         with:
           repository-test-name: 'betrybe/sd-0x-project-trybeer-v2-tests'
           repository-test-branch: 'teste_avaliador'
