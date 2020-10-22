@@ -4,6 +4,17 @@ Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
+
+### Habilidades
+
+- Organização do seu código e a arquitetura geral da aplicação (tanto da API quando do front-end);
+
+- Aderência à abordagem DDD;
+
+- Aderência aos princípios SOLID;
+
+- Cobertura de testes no back-end e no front-end.
+
 ## Instruções para entregar seu projeto:
 
 ### ANTES DE COMEÇAR A DESENVOLVER:
