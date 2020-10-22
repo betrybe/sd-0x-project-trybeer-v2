@@ -9,11 +9,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 - Organização do seu código e a arquitetura geral da aplicação (tanto da API quando do front-end);
 
-- Aderência à abordagem DDD;
+- Usar sockets através do socket.io;
 
 - Aderência aos princípios SOLID;
 
 - Cobertura de testes no back-end e no front-end.
+
+- Aprender a usar dois bancos de dados paralelamente na mesma aplicação.
 
 ## Instruções para entregar seu projeto:
 
