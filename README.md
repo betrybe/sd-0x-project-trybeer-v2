@@ -99,7 +99,7 @@ Nesse projeto vocês irão desenvolver novas funcionalidades a partir dos conhec
 
 No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto além do _MySQL_, vocês terão que utilizar o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
 
-O principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês. A intenção é refatorar o projeto para, por exemplo, utilizar o _ORM Sequelize_, utilizar a abordagem _DDD_, dentre outras coisas. Novas features deverão ser adicionadas como, por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
+O principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês. A intenção é refatorar o projeto para, por exemplo, utilizar o _ORM Sequelize_, dentre outras coisas. Novas features deverão ser adicionadas como, por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
 
 Dito tudo isso, vamos para os requisitos para que vocês tenham maiores detalhes do que deve ser desenvolvido nesse projeto!
 
@@ -132,13 +132,13 @@ Para o banco de dados, você deverá utilizar o `MySQL` e o `MongoDB`. Modele-os
 
 ##### Você também deve **escrever testes unitários que devem cobrir pelo menos 90% do projeto**. Na [documentação do Jest CLI](https://jestjs.io/docs/en/cli) é possível ver como essa cobertura é coletada.
 
-⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **ESLint** e se estiver, também, seguindo corretamente os padrões REST para rotas e DDD para o back-end. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
+⚠️ Lembre-se de que o seu projeto só será avaliado se estiver passando pelos _checks_ do **ESLint** e se estiver, também, seguindo corretamente os padrões REST. Além disso, você deve utilizar das `migrations` e dos `seeders` para a criação do seu banco de dados, das tabelas e inserção de dados iniciais.
 
 O intuito desse app é que uma pessoa possa pedir uma cerveja no aplicativo e outra pessoa possa aceitar esse pedido no **admin**.
 
 ⚠️ **Dica**: Ao refatorar e adicionar funcionalidades, não se esqueça de que está respeitando os princípios do SOLID. Atente-se a implementação dos princípios sempre que tiver fazendo alguma alteração no código.
 
-### Abordagem DDD e Sequelize
+### Sequelize
 
 - A lógica da regra de negócio da aplicação deve estar centralizada no back-end, ou seja, na API `Node.js`. Com isso, o único lugar que deve conter a lógica será o back-end: o banco de dados e front-end **não devem** conter lógicas de regra de negócio. Ou seja, muito cuidado ao utilizar _triggers_, _procedures_, dentre outras, e muito cuidado com regras de negócio no front-end.
 
