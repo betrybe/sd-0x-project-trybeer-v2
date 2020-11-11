@@ -128,6 +128,10 @@ export function logout() {
   clickButton('[data-testid="side-menu-item-logout"]');
 }
 
+export function logoutAdmin() {
+  clickButton('[data-testid="side-menu-item-logout"]');
+}
+
 export function accessHomeAndLogin(){
   cy.visit(Cypress.config().baseUrl);
   login(Cypress.env('login'), Cypress.env('password'));

@@ -4,6 +4,7 @@ import {
   clickButton,
   logout, 
   login,
+  logoutAdmin,
   accessOrdersAdmin,
   accessOrdersClient,
 } from '../actions/actionBase';
@@ -29,7 +30,7 @@ describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () =>
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
     clickButton('[data-testid="mark-as-prepared-btn"]');
-    logout();
+    logoutAdmin();
     login(Cypress.env('login'), Cypress.env('password'));
     accessOrdersClient();
     verifyContainsText('Preparando'); 
@@ -40,7 +41,7 @@ describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () =>
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
     clickButton('[data-testid="mark-as-delivered-btn"]');
-    logout();
+    logoutAdmin();
     login(Cypress.env('login'), Cypress.env('password'));
     accessOrdersClient();
     verifyContainsText('Entregue');
