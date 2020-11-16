@@ -7,7 +7,7 @@ import { internet } from 'faker';
 
 const FRONT_URL = `https://${Cypress.env('gitHubUser')}-front.herokuapp.com`
 
-describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
+describe("Realizar o deploy do projeto back-end e front-end", () => {
   beforeEach(() => {
     cy.visit(`${FRONT_URL}/login`);
   });
