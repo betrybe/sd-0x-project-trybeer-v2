@@ -190,7 +190,7 @@ module.exports = {
 };
 ```
 
-**(Neste arquivo e obrigatório deixar o nome do database como `"database": 'Trybeer'`)**
+**A variável SCHEMA obrigatoriamente deve ser 'Trybeer'**
 
 2 - Passo
 
@@ -198,9 +198,23 @@ Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2/cypress/plugins/index.j
 
 `config.env.gitHubUser = process.env.GITHUB_USER;`
 
-OBS: O valor da variável `GITHUB_USER` deverá ser o mesmo nome do seu usuário do github.
+OBS: O valor da variável `GITHUB_USER` deverá ser o mesmo nome do seu usuário do github. O grupo deve escolher o nome de usuário de uma pessoa integrante.
 
 3 - Passo
+
+No arquivo `sd-0x-project-trybeer-v2/.github/workflows/main.yml` altere a linha 45 para incluir o nome de usuário utilizado no passo anterior.
+
+antes:
+```
+GITHUB_USER: ${{ github.actor }} 
+```
+
+depois:
+```
+GITHUB_USER: 'fulan_de_tal'
+```
+
+4 - Passo
 
 Quando for criar a conexão com o `MONGODB` crie duas variáveis de ambiente `process.env.DB_URL` e `process.env.DB_NAME` e configure o banco conforme exemplo abaixo:
 
@@ -239,7 +253,7 @@ E a variável `process.env.DB_NAME` e o nome do banco com exemplo abaixo:
 
 `DB_NAME=Trybeer`
 
-4 - Passo
+5 - Passo
 
 OBS: Haverá um arquivo de conexão com o mongodb já pronto no caminho `sd-0x-project-trybeer-v2/cypress/plugins/connection.js`, ele é usado para o avaliador, então não se esqueça de adicionar essas variáveis na pasta raiz tambem para poder rodar local.
 
