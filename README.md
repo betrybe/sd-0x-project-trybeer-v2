@@ -501,7 +501,7 @@ OBS: Haverá um arquivo de conexão com o mongodb já pronto no caminho `sd-0x-p
 
 ### Tela de chat do admin
 
-![Chat do cliente](./public/chatadmin.png)
+![Chat do cliente](./public/chatAdmin.png)
 
   - O campo input de mensagem deverá conter a tag `data-testid="chat-message"`
 
