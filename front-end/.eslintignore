@@ -3,3 +3,4 @@ serviceWorker.js
 setupTests.js
 .gitattributes
 .env
+src/App.js
