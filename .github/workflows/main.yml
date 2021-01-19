@@ -2,9 +2,34 @@ on:
   pull_request:
     types: [opened, synchronize]
 jobs:
+  eslint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1.4.4
+        with:
+          node-version: '12'
+      - name: ESLint
+        uses: betrybe/eslint-linter-action@v2.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  stylelint:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1.4.4
+        with:
+          node-version: '12'
+      - name: Stylelint
+        uses: betrybe/stylelint-linter-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
   evaluator_job:
     name: Evaluator Job
     runs-on: ubuntu-18.04
+    needs: [eslint, stylelint]
     services:
       mongodb:
         image: mongo
@@ -21,19 +46,15 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1.4.4	
+      - uses: actions/setup-node@v1.4.4
         with:	
           node-version: '12'
-      - name: Static code analysis step
-        uses: betrybe/eslint-linter-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Evaluator step
         id: evaluator
         uses: betrybe/cypress-evaluator-action@v5
         with:
           repository-test-name: 'betrybe/sd-0x-project-trybeer-v2-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'main'
           npm-start: true
         env:
           MYSQL_USER: 'root'
