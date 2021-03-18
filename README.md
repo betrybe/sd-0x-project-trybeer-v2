@@ -1,9 +1,72 @@
+### Termos de acordo
+
+Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
+
+---
+
 # Boas vindas ao repositório do projeto TryBeer v2!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
+
+
+# Sumário
+
+- [Boas vindas ao repositório do projeto TryBeer v2!](#boas-vindas-ao-repositório-do-projeto-trybeer-v2)
+- [Sumário](#sumário)
+    - [Habilidades](#habilidades)
+  - [Instruções para entregar seu projeto:](#instruções-para-entregar-seu-projeto)
+    - [ANTES DE COMEÇAR A DESENVOLVER:](#antes-de-começar-a-desenvolver)
+- [Entregáveis](#entregáveis)
+    - [Análise Estática](#análise-estática)
+  - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
+        - [⚠️ Lembre-se de escrever testes unitários e sinta-se livre para alterar a UI. Contudo, respeite os atributos `data-testid`, pois eles serão usados na correção do projeto.](#️-lembre-se-de-escrever-testes-unitários-e-sinta-se-livre-para-alterar-a-ui-contudo-respeite-os-atributos-data-testid-pois-eles-serão-usados-na-correção-do-projeto)
+        - [⚠️ Para ver os comentários sobre cada componente, basta clicar no ícone de comentários no Figma (lado esquerdo superior).](#️-para-ver-os-comentários-sobre-cada-componente-basta-clicar-no-ícone-de-comentários-no-figma-lado-esquerdo-superior)
+    - [Data de Entrega](#data-de-entrega)
+  - [Requisitos do projeto](#requisitos-do-projeto)
+        - [Você também deve **escrever testes unitários que devem cobrir pelo menos 90% do projeto**. Na documentação do Jest CLI é possível ver como essa cobertura é coletada.](#você-também-deve-escrever-testes-unitários-que-devem-cobrir-pelo-menos-90-do-projeto-na-documentação-do-jest-cli-é-possível-ver-como-essa-cobertura-é-coletada)
+    - [Sequelize](#sequelize)
+    - [👀Observações importantes:](#observações-importantes)
+  - [Requisitos do projeto](#requisitos-do-projeto-1)
+    - [1 - Desenvolver os status para o pedido da tela de `Detalhe pedido` do Administrador](#1---desenvolver-os-status-para-o-pedido-da-tela-de-detalhe-pedido-do-administrador)
+    - [Tela de `Detalhe pedido` Administrador](#tela-de-detalhe-pedido-administrador)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas)
+    - [2 - Desenvolver os status para o pedido da tela `Pedidos` do Administrador](#2---desenvolver-os-status-para-o-pedido-da-tela-pedidos-do-administrador)
+    - [Tela de `Pedido` do Administrador](#tela-de-pedido-do-administrador)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-1)
+    - [3 - Desenvolver os status para o pedido da tela Pedidos do Cliente](#3---desenvolver-os-status-para-o-pedido-da-tela-pedidos-do-cliente)
+    - [Tela de `Pedidos` do Cliente](#tela-de-pedidos-do-cliente)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-2)
+    - [4 - Desenvolver os status para o pedido da tela de Detalhe pedido Cliente](#4---desenvolver-os-status-para-o-pedido-da-tela-de-detalhe-pedido-cliente)
+    - [Tela de `Detalhes de Pedido` do Cliente](#tela-de-detalhes-de-pedido-do-cliente)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-3)
+    - [5 - Criar um botão no sidebar para acessar o chat do cliente](#5---criar-um-botão-no-sidebar-para-acessar-o-chat-do-cliente)
+    - [Sidebar do Cliente](#sidebar-do-cliente)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-4)
+    - [6 - Desenvolver funcionalidade de chat na visão de cliente](#6---desenvolver-funcionalidade-de-chat-na-visão-de-cliente)
+    - [Tela do Detalhe de chat do cliente](#tela-do-detalhe-de-chat-do-cliente)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-5)
+    - [7 - Criar botão no sidebar para acessar a lista de chats do admin](#7---criar-botão-no-sidebar-para-acessar-a-lista-de-chats-do-admin)
+    - [Sidebar Administrador](#sidebar-administrador)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-6)
+    - [8 - Criar funcionalidade de lista de conversas de chat na visão de administrador](#8---criar-funcionalidade-de-lista-de-conversas-de-chat-na-visão-de-administrador)
+    - [Tela de listas de conversas](#tela-de-listas-de-conversas)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-7)
+    - [9 - Desenvolver funcionalidade de chat na visão de administrador](#9---desenvolver-funcionalidade-de-chat-na-visão-de-administrador)
+    - [Tela de chat do admin](#tela-de-chat-do-admin)
+    - [Além disso,as seguintes verificações serão feitas:](#além-dissoas-seguintes-verificações-serão-feitas-8)
+    - [10 - Desenvolva a cobertura de testes unitários do back-end](#10---desenvolva-a-cobertura-de-testes-unitários-do-back-end)
+  - [Bônus](#bônus)
+    - [11 - Realizar o deploy do projeto back-end e front-end](#11---realizar-o-deploy-do-projeto-back-end-e-front-end)
+    - [Deploy Heroku](#deploy-heroku)
+    - [Faça o deploy do front-end:](#faça-o-deploy-do-front-end)
+    - [Faça o deploy do back-end:](#faça-o-deploy-do-back-end)
+    - [12 - Desenvolva a cobertura de testes unitários do front-end](#12---desenvolva-a-cobertura-de-testes-unitários-do-front-end)
+    - [DURANTE O DESENVOLVIMENTO](#durante-o-desenvolvimento)
+    - [DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)](#depois-de-terminar-o-desenvolvimento-opcional)
+    - [REVISANDO UM PULL REQUEST](#revisando-um-pull-request)
 
 ### Habilidades
 
