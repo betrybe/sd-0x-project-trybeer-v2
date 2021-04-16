@@ -36,7 +36,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
     - [11 - Realizar o deploy do projeto back-end e front-end](#11---realizar-o-deploy-do-projeto-back-end-e-front-end)
     - [12 - Desenvolva a cobertura de testes unitários do front-end](#12---desenvolva-a-cobertura-de-testes-unitários-do-front-end)
-- [Depois de terminar o desenvolvimento (Opicional)](#depois-de-terminar-o-desenvolvimento)
+- [Depois de terminar o desenvolvimento (Opcional)](#depois-de-terminar-o-desenvolvimento)
 - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos Finais](#avisos-finais)
 
