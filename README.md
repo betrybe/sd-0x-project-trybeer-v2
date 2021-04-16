@@ -289,7 +289,7 @@ OBS: O valor da variável `GITHUB_USER` deverá ser o mesmo nome do seu usuário
 
 3 - Passo
 
-No arquivo `sd-0x-project-trybeer-v2-rubric-3/.github/workflows/main.yml` altere a linha 45 para incluir o nome de usuário utilizado no passo anterior.
+No arquivo `sd-0x-project-trybeer-v2.github/workflows/main.yml` altere a linha 45 para incluir o nome de usuário utilizado no passo anterior.
 
 antes:
 ```
