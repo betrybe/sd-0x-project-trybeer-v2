@@ -342,7 +342,7 @@ E a variável `process.env.DB_NAME` e o nome do banco com exemplo abaixo:
 
 5 - Passo
 
-OBS: Haverá um arquivo de conexão com o mongodb já pronto no caminho `sd-0x-project-trybeer-v2-rubric-3/cypress/plugins/connection.js`, ele é usado para o avaliador, então não se esqueça de adicionar essas variáveis na pasta raiz tambem para poder rodar local.
+OBS: Haverá um arquivo de conexão com o mongodb já pronto no caminho `sd-0x-project-trybeer-v2/cypress/plugins/connection.js`, ele é usado para o avaliador, então não se esqueça de adicionar essas variáveis na pasta raiz tambem para poder rodar local.
 
 **Você irá precisar configurar as variáveis globais do MySQL.** Você pode usar esse [Conteúdo de variáveis de ambiente com NodeJS](https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/) como referência.
 
