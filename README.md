@@ -70,7 +70,13 @@ Nesse projeto vocês irão desenvolver novas funcionalidades a partir dos conhec
 
 No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto além do _MySQL_, vocês terão que utilizar o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
 
-O principal intuito desse projeto é que vocês refatorem alguns pontos do que já foi desenvolvido por vocês. A intenção é refatorar o projeto para, por exemplo, utilizar o _ORM Sequelize_, dentre outras coisas. Novas features deverão ser adicionadas como, por exemplo, a implementação de um chat para estabelecer uma conversa entre o estabelecimento e a pessoa usuária, dentre outras implementações.
+Nesse projeto será necessário:
+
+* Refatorar a camada de modelo para usar Sequelize;
+* Possibilitar que um administrador possa mudar o status atual de um pedido para um terceiro tipo `Preparando` e exibir essa informação nas partes que são determinadas;
+* Desenvolver um chat onde um cliente possa conversar diretamente com o administrador;
+* Fazer testes com cobertura de 90% para o back-end e front-end;
+* Fazer deploy da aplicação utilizando o Heroku
 
 Dito tudo isso, vamos para os requisitos para que vocês tenham maiores detalhes do que deve ser desenvolvido nesse projeto!
 
