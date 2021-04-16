@@ -677,7 +677,7 @@ Faça o deploy com o git.
 ---
 
 # Depois de terminar o desenvolvimento
-## OBS: Passo Opicional
+## OBS: Passo Opcional
 
 Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
 
