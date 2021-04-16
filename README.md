@@ -64,8 +64,6 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 Esse projeto é uma continuação do projeto `Trybeer`! Ou seja, o _commit_ inicial nesse repositório será todo o projeto que foi desenvolvido por vocês anteriormente. Logo, esse será o ponto de partida de vocês para esse projeto.
 
-O grupo continua sendo o mesmo que foi quando vocês desenvolveram o `Trybeer v1`.
-
 Nesse projeto vocês irão desenvolver novas funcionalidades a partir dos conhecimentos adquiridos nos últimos blocos. Além de desenvolver novas funcionalidades, vocês terão também novos desafios, pois algumas demandas farão com que vocês refatorem a arquitetura do projeto.
 
 No projeto `Trybeer v1` vocês utilizaram apenas o banco de dados _MySQL_. Já nesse projeto além do _MySQL_, vocês terão que utilizar o _MongoDB_. Vocês verão com mais detalhes nos requisitos do projeto.
@@ -107,9 +105,9 @@ ___
 ## Antes de começar a desenvolver:
 
 1. Clone o repositório
-  * `git clone https://github.com/betrybe/sd-0x-project-trybeer-v2-rubric-3.git`.
+  * `git clone https://github.com/betrybe/sd-0x-project-trybeer-v2.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-project-trybeer-v2-rubric-3`
+    * `cd sd-0x-project-trybeer-v2`
 
 2. Instale as dependências [**Caso existam**]
   * `npm install`
@@ -121,7 +119,7 @@ ___
     * Exemplo: `git checkout master`
   * Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-sd-0x-project-trybeer-v2-rubric-3`
+    * Exemplo: `git checkout -b joaozinho-sd-0x-project-trybeer-v2`
 
 4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
   * Verifique que as mudanças ainda não estão no _stage_
@@ -136,16 +134,16 @@ ___
         * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-sd-0x-project-trybeer-v2-rubric-3`
+  * Usando o exemplo anterior: `git push -u origin joaozinho-sd-0x-project-trybeer-v2`
 
 6. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-trybeer-v2-rubric-3/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-trybeer-v2/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-trybeer-v2-rubric-3/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-trybeer-v2/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -244,7 +242,7 @@ Assim o banco e terá alguns dados inseridos.
 
 1 - Passo
 
-Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2-rubric-3/back-end/config/config.js`
+Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2/back-end/config/config.js`
 
 ```javascript
 require('dotenv').config();
@@ -281,7 +279,7 @@ module.exports = {
 
 2 - Passo
 
-Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2-rubric-3/cypress/plugins/index.js`. Neste arquivo, na linha 44, Haverá a seguinte comando:
+Haverá um arquivo no caminho: `sd-0x-project-trybeer-v2/cypress/plugins/index.js`. Neste arquivo, na linha 44, Haverá a seguinte comando:
 
 `config.env.gitHubUser = process.env.GITHUB_USER;`
 
