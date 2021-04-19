@@ -10,7 +10,7 @@ import {
   verifyElementNotVisible,
 } from '../actions/actionBase';
       
-describe('Desenvolver os status para o pedido da tela de `Detalhe pedido` do Administrador', () => {
+describe('1 - Desenvolver os status para o pedido da tela de `Detalhe pedido` do Administrador', () => {
   beforeEach(() => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');
