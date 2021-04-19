@@ -9,7 +9,7 @@ import {
   accessOrdersClient,
 } from '../actions/actionBase';
         
-describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () => {
+describe('3 - Desenvolver os status para o pedido da tela de Detalhe pedido Cliente', () => {
   beforeEach(() => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');
@@ -18,14 +18,16 @@ describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () =>
     loginClientAndBuyProduct();
     logout();
   });
-
-  it('Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Meus pedidos` do cliente', () => {
+  
+  it('Dado que é feito uma compra, será validado que ela está com status `Pendente` na tela de `Detalhes do pedido` do cliente', () => {
     login(Cypress.env('login'), Cypress.env('password'));
     accessOrdersClient();
     verifyContainsText('Pendente');
+    clickButton('[data-testid="0-order-number"]');
+    verifyContainsText('Pendente');
   });
 
-  it('Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `Pedidos` do cliente o status mudou para `Preparando`', () => {
+  it('Dado que o admin marcou o pedido como `Preparando` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Preparando`', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
@@ -33,10 +35,11 @@ describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () =>
     logoutAdmin();
     login(Cypress.env('login'), Cypress.env('password'));
     accessOrdersClient();
-    verifyContainsText('Preparando'); 
+    clickButton('[data-testid="0-order-number"]');
+    verifyContainsText('Preparando');
   });
 
-  it('Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `Pedidos` do cliente o status mudou para `Entregue`', () => {
+  it('Dado que o admin marcou o pedido como `Entregue` é verificado que na tela de `detalhe do pedido` do cliente o status mudou para `Entregue`', () => {
     login(Cypress.env('loginAdmin'), Cypress.env('passwordAdmin'));
     accessOrdersAdmin();
     clickButton('[data-testid="0-order-number"]');
@@ -44,7 +47,7 @@ describe('Desenvolver os status para o pedido da tela Pedidos do Cliente', () =>
     logoutAdmin();
     login(Cypress.env('login'), Cypress.env('password'));
     accessOrdersClient();
+    clickButton('[data-testid="0-order-number"]');
     verifyContainsText('Entregue');
   });
 });
-   

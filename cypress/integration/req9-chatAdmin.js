@@ -10,7 +10,7 @@ import {
   getHour,
 } from '../actions/actionBase';
 
-describe('Desenvolver funcionalidade de chat na visão de administrador', () => {
+describe('9 - Desenvolver funcionalidade de chat na visão de administrador', () => {
   beforeEach( () => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');

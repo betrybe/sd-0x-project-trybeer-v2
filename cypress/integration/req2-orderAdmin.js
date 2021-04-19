@@ -8,7 +8,7 @@ import {
   verifyElementContainsText,
 } from '../actions/actionBase';
       
-describe('Desenvolver os status para o pedido da tela `Pedidos` do Administrador', () => {
+describe('2 - Desenvolver os status para o pedido da tela `Pedidos` do Administrador', () => {
   beforeEach(() => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');

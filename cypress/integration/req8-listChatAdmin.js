@@ -8,7 +8,7 @@ import {
   verifyContainsUrl,
 } from '../actions/actionBase';
 
-describe('Criar funcionalidade de lista de conversas de chat na visão de administrador', () => {
+describe('8 - Criar funcionalidade de lista de conversas de chat na visão de administrador', () => {
   beforeEach( () => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');

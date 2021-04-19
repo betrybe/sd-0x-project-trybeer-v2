@@ -6,7 +6,7 @@ import {
   verifyContainsUrl,
 } from '../actions/actionBase';
 
-describe('Criar um botão no sidebar para acessar o chat do cliente', () => {
+describe('5 - Criar um botão no sidebar para acessar o chat do cliente', () => {
   beforeEach( () => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');
