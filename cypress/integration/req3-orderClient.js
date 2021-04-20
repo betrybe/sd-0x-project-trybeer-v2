@@ -9,7 +9,7 @@ import {
   accessOrdersClient,
 } from '../actions/actionBase';
         
-describe('4 - Desenvolver os status para o pedido da tela Pedidos do Cliente', () => {
+describe('3 - Desenvolver os status para o pedido da tela Pedidos do Cliente', () => {
   beforeEach(() => {
     cy.exec('cd back-end && npx sequelize-cli db:drop');
     cy.exec('cd back-end && npx sequelize-cli db:create && npx sequelize-cli db:migrate $');
